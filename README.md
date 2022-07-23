@@ -2,11 +2,11 @@
 
 ## 线性查找
 
-- 01-Linear-Search
-  - 1-Linear-Search
-  - 2-Using-Generics
-  - 3-Using-Custom-Class
-  - 4-Test-Performance
+- **01-Linear-Search**
+  - `1-Linear-Search`
+  - `2-Using-Generics`
+  - `3-Using-Custom-Class`
+  - `4-Test-Performance`
 
 [循环不变量](https://zh.wikipedia.org/wiki/%E5%BE%AA%E7%8E%AF%E4%B8%8D%E5%8F%98%E9%87%8F)
 
@@ -80,4 +80,51 @@ $$
 01-4_1
 
 ![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png)
+
+## 基础排序算法
+
+- **02-Selection-Sort**
+  - `1-Selection-Sort`
+
+### 选择排序法
+
+***6 4 2 3 1 5***
+
+（$i = 0$，$j = 0，1，2，3，4，5$）：遍历（$minIndex = 4$）
+
+**1** 4 2 3 **6** 5
+
+
+
+（$i = 1$，$j = 1，2，3，4，5$）：遍历（$minIndex = 2$）
+
+1 **2** **4** 3 6 5
+
+
+
+（$i = 2$，$j = 2，3，4，5$）：遍历（$minIndex = 3$）
+
+1 2 **3** **4** 6 5
+
+
+
+（$i = 3$，$j = 3，4，5$）：遍历（$minIndex = 3$）
+
+1 2 3 4 6 5
+
+
+
+（$i = 4$，$j = 4，5$）：遍历（$minIndex = 5$）
+
+1 2 3 4 **5** **6**
+
+
+
+下一步可以省略
+
+（$i = 5$，$j = 5$）：遍历（$minIndex = 5$）
+
+1 2 3 4 5 6
+
+### 插入排序法
 
