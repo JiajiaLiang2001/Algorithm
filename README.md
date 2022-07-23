@@ -6,6 +6,7 @@
   - 1-Linear-Search
   - 2-Using-Generics
   - 3-Using-Custom-Class
+  - 4-Test-Performance
 
 [循环不变量](https://zh.wikipedia.org/wiki/%E5%BE%AA%E7%8E%AF%E4%B8%8D%E5%8F%98%E9%87%8F)
 
@@ -75,4 +76,8 @@ $\mathrm{O}(1)$
 $$
 \mathrm{O}(1)<\mathrm{O}(\log n)<\mathrm{O}(\sqrt{n})<\mathrm{O}(n)<\mathrm{O}(n \log n)<\mathrm{O}\left(n^{2}\right)<\mathrm{O}\left(2^{n}\right)<\mathrm{O}(n !)
 $$
+
+01-4_1
+
+![Test-Performance]()
 
