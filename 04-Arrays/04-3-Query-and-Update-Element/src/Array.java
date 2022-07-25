@@ -91,7 +91,7 @@ public class Array {
      * @param index
      * @param e
      */
-    public void set(int index, int e) {
+    public void setElement(int index, int e) {
         if (index < 0 || index >= size)
             throw new IllegalArgumentException("Set failed. Index is illegal.");
         data[index] = e;
