@@ -104,9 +104,8 @@ public class Array<E> {
      * @return
      */
     public boolean contains(E e) {
-        for (E i : data) {
+        for (E i : data)
             if (i.equals(e)) return true;
-        }
         return false;
     }
 
@@ -117,10 +116,9 @@ public class Array<E> {
      * @return
      */
     public int find(E e) {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++)
             if (data[i].equals(e))
                 return i;
-        }
         return -1;
     }
 

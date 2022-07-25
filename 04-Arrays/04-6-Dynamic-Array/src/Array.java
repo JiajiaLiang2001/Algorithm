@@ -1,5 +1,5 @@
-public class Array {
-    private int[] data;
+public class Array<E> {
+    private E[] data;
     private int size;
 
     public Array() {
@@ -7,7 +7,7 @@ public class Array {
     }
 
     public Array(int capacity) {
-        data = new int[capacity];
+        data = (E[]) new Object[capacity];
         size = 0;
     }
 
@@ -44,11 +44,11 @@ public class Array {
      * @param index
      * @param e
      */
-    public void add(int index, int e) {
-        if (size == data.length)
-            throw new IllegalArgumentException("Add failed. Array is full.");
+    public void add(int index, E e) {
         if (index < 0 || index > size)
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
+        if (size == data.length)
+            resize(2 * data.length);
         for (int i = size - 1; i >= index; i--)
             data[i + 1] = data[i];
         data[index] = e;
@@ -60,7 +60,7 @@ public class Array {
      *
      * @param e
      */
-    public void addLast(int e) {
+    public void addLast(E e) {
         add(size, e);
     }
 
@@ -69,7 +69,7 @@ public class Array {
      *
      * @param e
      */
-    public void addFirst(int e) {
+    public void addFirst(E e) {
         add(0, e);
     }
 
@@ -79,7 +79,7 @@ public class Array {
      * @param index
      * @return
      */
-    public int getElement(int index) {
+    public E getElement(int index) {
         if (index < 0 || index >= size)
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         return data[index];
@@ -91,7 +91,7 @@ public class Array {
      * @param index
      * @param e
      */
-    public void setElement(int index, int e) {
+    public void setElement(int index, E e) {
         if (index < 0 || index >= size)
             throw new IllegalArgumentException("Set failed. Index is illegal.");
         data[index] = e;
@@ -103,9 +103,9 @@ public class Array {
      * @param e
      * @return
      */
-    public boolean contains(int e) {
-        for (int i : data)
-            if (i == e) return true;
+    public boolean contains(E e) {
+        for (E i : data)
+            if (i.equals(e)) return true;
         return false;
     }
 
@@ -115,9 +115,9 @@ public class Array {
      * @param e
      * @return
      */
-    public int find(int e) {
+    public int find(E e) {
         for (int i = 0; i < size; i++)
-            if (data[i] == e)
+            if (data[i].equals(e))
                 return i;
         return -1;
     }
@@ -128,13 +128,17 @@ public class Array {
      * @param index
      * @return
      */
-    public int remove(int index) {
+    public E remove(int index) {
         if (index < 0 || index >= size)
             throw new IllegalArgumentException("Remove failed. Index is illegal.");
-        int ret = data[index];
-        for (int i = index + 1; i < data.length; i++)
+        E ret = data[index];
+        for (int i = index + 1; i < data.length; i++) {
             data[i - 1] = data[i];
+        }
         size--;
+        data[size] = null;
+        if (size == data.length / 2)
+            resize(data.length / 2);
         return ret;
     }
 
@@ -143,7 +147,7 @@ public class Array {
      *
      * @return
      */
-    public int removeLast() {
+    public E removeLast() {
         return remove(size - 1);
     }
 
@@ -152,8 +156,18 @@ public class Array {
      *
      * @return
      */
-    public int removeFirst() {
+    public E removeFirst() {
         return remove(0);
+    }
+
+    /**
+     * @param newCapacity
+     */
+    private void resize(int newCapacity) {
+        E[] newData = (E[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++)
+            newData[i] = data[i];
+        data = newData;
     }
 
     @Override
