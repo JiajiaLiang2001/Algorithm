@@ -103,6 +103,9 @@ $$
   - `02-2-Using-Generics`
   - `02-3-Using-Comparable`
   - `02-4-Test-Performance`
+- **03-Insertion-Sort**
+  - `03-1-Insertion-Sort`
+  - `03-2-Insertion-Sort-Optimized`
 
 ### 选择排序法
 
@@ -180,7 +183,7 @@ $\mathrm{O}\left(n^{2}\right)$
 ------
 
 ```java
-for (int i = 0; i < arr.length; i++) {
+for (int i = 1; i < arr.length; i++) {// i = 0
     for (int j = i; j - 1 >= 0; j--) {
         if (arr[j].compareTo(arr[j - 1]) < 0)
             swap(arr, j - 1, j);
@@ -188,8 +191,10 @@ for (int i = 0; i < arr.length; i++) {
     }
 }
 
-//for (int j = i; j - 1 >= 0 && arr[j].compareTo(arr[j - 1]) < 0; j--)
-//    swap(arr, j - 1, j);
+for (int i = 1; i < arr.length; i++) {// i = 0
+	for (int j = i; j - 1 >= 0 && arr[j].compareTo(arr[j - 1]) < 0; j--)
+		swap(arr, j - 1, j);
+}
 ```
 
 该步可以省略：
@@ -229,6 +234,33 @@ for (int i = 0; i < arr.length; i++) {
 1 2 3 4 5 6 
 
 ![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_1_1.png)
+
+#### 插入排序算法优化
+
+```java
+for (int i = 1; i < arr.length; i++) {// i = 0
+    E t = arr[i];
+    int j;
+    for (j = i; j - 1 >= 0; j--) {
+        if (t.compareTo(arr[j - 1]) < 0)
+            arr[j] = arr[j - 1];
+        else
+            break;
+    }
+    arr[j] = t;
+}
+
+for (int i = 1; i < arr.length; i++) {// i = 0
+	E t = arr[i];
+    int j;
+    for(j = i; j - 1 >= 0 && t.compareTo(arr[j - 1]) < 0; j --){
+        arr[j] = arr[j - 1];
+    }
+    arr[j] = t;
+}
+```
+
+![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_2_1.png)
 
 ## Star History
 
