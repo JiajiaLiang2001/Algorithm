@@ -79,7 +79,7 @@ $$
 \mathrm{O}(1)<\mathrm{O}(\log n)<\mathrm{O}(\sqrt{n})<\mathrm{O}(n)<\mathrm{O}(n \log n)<\mathrm{O}\left(n^{2}\right)<\mathrm{O}\left(2^{n}\right)<\mathrm{O}(n !)
 $$
 
-01-4_1
+**01_4_1**
 
 ![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png)
 
@@ -144,6 +144,9 @@ $$
 
 $\mathrm{O}\left(n^{2}\right)$
 
-### 插入排序法
+**02_4_1**
 
 ![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png)
+
+### 插入排序法
+
