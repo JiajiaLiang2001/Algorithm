@@ -132,5 +132,18 @@ $$
 
 1 2 3 4 5 6
 
+#### 算法复杂度
+
+$$
+\begin{aligned}
+& 1+2+3+\ldots+\mathrm{n} \\
+=& \frac{(1+n) * n}{2} \\
+=& \frac{1}{2} n^{2}+\frac{1}{2} n
+\end{aligned}
+$$
+
+$\mathrm{O}\left(n^{2}\right)$
+
 ### 插入排序法
 
+![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png)
