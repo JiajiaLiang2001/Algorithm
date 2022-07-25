@@ -143,6 +143,7 @@ public class Array {
 
     /**
      * Remove an element to the beginning of array
+     *
      * @return
      */
     public int removeLast() {
@@ -151,6 +152,7 @@ public class Array {
 
     /**
      * Remove an element to the end of the array
+     *
      * @return
      */
     public int removeFirst() {
