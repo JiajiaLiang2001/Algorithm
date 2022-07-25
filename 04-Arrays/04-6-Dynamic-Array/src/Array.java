@@ -161,6 +161,8 @@ public class Array<E> {
     }
 
     /**
+     * Redefine array size
+     *
      * @param newCapacity
      */
     private void resize(int newCapacity) {
