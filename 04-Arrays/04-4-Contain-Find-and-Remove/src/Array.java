@@ -39,7 +39,7 @@ public class Array {
     }
 
     /**
-     * Add an element to the beginning of array
+     * Add array element
      *
      * @param index
      * @param e
@@ -65,7 +65,7 @@ public class Array {
     }
 
     /**
-     * Add an element to the array head
+     * Add an element to the beginning of array
      *
      * @param e
      */
