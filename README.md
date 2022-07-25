@@ -102,12 +102,24 @@ $$
   - `02-1-Selection-Sort`
   - `02-2-Using-Generics`
   - `02-3-Using-Comparable`
+  - `02-4-Test-Performance`
 
 ### 选择排序法
 
 ***6 4 2 3 1 5***
 
 ------
+
+```java
+for (int i = 0; i < arr.length - 1; i++) {//i < arr.length
+    int minIndex = i;
+    for (int j = i; j < arr.length; j++) {
+        if (arr[j].compareTo(arr[minIndex]) < 0)
+            minIndex = j;
+    }
+    swap(arr, i, minIndex);
+}
+```
 
 （$i = 0$，$j = 0，1，2，3，4，5$）：遍历（$minIndex = 4$）
 
@@ -163,3 +175,61 @@ $\mathrm{O}\left(n^{2}\right)$
 
 ### 插入排序法
 
+***6 4 2 3 1 5***
+
+------
+
+```java
+for (int i = 0; i < arr.length; i++) {
+    for (int j = i; j - 1 >= 0; j--) {
+        if (arr[j].compareTo(arr[j - 1]) < 0)
+            swap(arr, j - 1, j);
+        else break;
+    }
+}
+
+//for (int j = i; j - 1 >= 0 && arr[j].compareTo(arr[j - 1]) < 0; j--)
+//    swap(arr, j - 1, j);
+```
+
+该步可以省略：
+
+（$i = 0$）：直接跳出
+
+6 4 2 3 1 5
+
+
+
+（$i = 1$，$j = 1$）：遍历比较
+
+4 6 2 3 1 5
+
+
+
+（$i = 2$，$j = 2，1$）：遍历比较
+
+2 4 6 3 1 5
+
+
+
+（$i = 3$，$j = 3，2，1$）：遍历比较
+
+2 3 4 6 1 5 
+
+
+
+（$i = 4$，$j = 4，3，2，1$）：遍历比较
+
+1 2 3 4 6 5 
+
+
+
+（$i = 5$，$j = 5，4，3，2，1$）：遍历比较
+
+1 2 3 4 5 6 
+
+![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_1_1.png)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
