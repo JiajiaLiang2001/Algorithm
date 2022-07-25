@@ -1,6 +1,7 @@
 # 数据结构与算法
 
 - [数据结构与算法](#数据结构与算法)
+- [基础了解](#基础了解)
   - [线性查找](#线性查找)
     - [常见的算法复杂度](#常见的算法复杂度)
       - [循环](#循环)
@@ -9,15 +10,24 @@
       - [长度为 $n$ 的二进制数字](#长度为-n-的二进制数字)
       - [长度为 $n$ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
       - [判断数字 $n$ 是否是偶数](#判断数字-n-是否是偶数)
-    - [算法复杂度大小比较](#算法复杂度大小比较)
+    - [时间复杂度大小比较](#时间复杂度大小比较)
   - [基础排序算法](#基础排序算法)
     - [选择排序法](#选择排序法)
-      - [算法复杂度](#算法复杂度)
+      - [时间复杂度](#时间复杂度)
     - [插入排序法](#插入排序法)
       - [插入排序算法优化](#插入排序算法优化)
-      - [算法复杂度](#算法复杂度-1)
+      - [时间复杂度](#时间复杂度-1)
       - [插入排序重要特征](#插入排序重要特征)
+- [数据结构](#数据结构)
+  - [数组](#数组)
+    - [泛型数组](#泛型数组)
+    - [动态数组](#动态数组)
+    - [时间复杂度](#时间复杂度-2)
+  - [栈和队列](#栈和队列)
+  - [链表](#链表)
   - [Star History](#star-history)
+
+# 基础了解
 
 ## 线性查找
 
@@ -90,7 +100,7 @@ $\mathrm{O}(n !)$
 
 $\mathrm{O}(1)$
 
-### 算法复杂度大小比较
+### 时间复杂度大小比较
 
 $$
 \mathrm{O}(1)<\mathrm{O}(\log n)<\mathrm{O}(\sqrt{n})<\mathrm{O}(n)<\mathrm{O}(n \log n)<\mathrm{O}\left(n^{2}\right)<\mathrm{O}\left(2^{n}\right)<\mathrm{O}(n !)
@@ -110,6 +120,7 @@ $$
 - **03-Insertion-Sort**
   - `03-1-Insertion-Sort`
   - `03-2-Insertion-Sort-Optimized`
+  - `03-3-Insertion-Sort-Features`
 
 ### 选择排序法
 
@@ -164,7 +175,7 @@ for (int i = 0; i < arr.length - 1; i++) {//i < arr.length
 
 1 2 3 4 5 6
 
-#### 算法复杂度
+#### 时间复杂度
 
 $$
 \begin{aligned}
@@ -266,7 +277,7 @@ for (int i = 1; i < arr.length; i++) {// i = 0
 
 ![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_2_1.png)
 
-#### 算法复杂度
+#### 时间复杂度
 
 $\mathrm{O}\left(n^{2}\right)$
 
@@ -275,6 +286,84 @@ $\mathrm{O}\left(n^{2}\right)$
 对于有序数组，插入排序的复杂度是 $O(n)$。因此，插入排序的复杂度小于等于选择排序。
 
 ![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_3_1.png)
+
+# 数据结构
+
+- 线性结构：数组、栈、队列、链表、哈希表
+- 树结构：二叉树、二分搜索树、AVL、红黑树、Treap、Splay、堆、Trie、线段树、K-D树、并查集、哈夫曼树
+- 图结构：领接矩阵、领接表
+
+## 数组
+
+- **04-Arrays**
+  - `04-1-Our-Own-Array`
+  - `04-2-Add-Element`
+  - `04-3-Query-and-Update-Element`
+  - `04-4-Contain-Find-and-Remove`
+  - `04-5-Generic-Data-Structures`
+  - `04-6-Dynamic-Array`
+
+封装属于我们的数组
+
+1. data：数组
+2. capacity：数组最大容量
+3. size：数组目前大小
+
+- `Array()`
+- `Array(int capacity)`
+- `int getCapacity()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void add(int index, E e)`
+  - `void resize(int newCapacity)`
+- `void addLast(E e)`
+- `void addFirst(E e)`
+- `E getElement(int index)`
+- `void setElement(int index, E e)`
+- `boolean contains(E e)`
+- `int find(E e)`
+- `E remove(int index)`
+  - `void resize(int newCapacity)`
+- `E removeLast()`
+- `E removeFirst()`
+- `String toString()`
+
+### 泛型数组
+
+![Generic-Array](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_5_1.png)
+
+### 动态数组
+
+![Dynamic-Array](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_6_1.png)
+
+### 时间复杂度
+
+|     操作      |   时间复杂度    |
+| :-----------: | :-------------: |
+|     `add`     | $\mathrm{O}(1)$ |
+|   `addLast`   | $\mathrm{O}(n)$ |
+|  `addFirst`   | $\mathrm{O}(n)$ |
+|   `remove`    | $\mathrm{O}(1)$ |
+| `removeLast`  | $\mathrm{O}(n)$ |
+| `removeFirst` | $\mathrm{O}(n)$ |
+| `setElement`  | $\mathrm{O}(1)$ |
+| `getElement`  | $\mathrm{O}(1)$ |
+|  `contains`   | $\mathrm{O}(n)$ |
+|    `find`     | $\mathrm{O}(n)$ |
+
+总结：
+
+增：$\mathrm{O}(n)$
+
+删：$\mathrm{O}(n)$
+
+改：已知索引 $\mathrm{O}(1)$，未知索引 $\mathrm{O}(n)$
+
+查：已知索引 $\mathrm{O}(1)$，未知索引 $\mathrm{O}(n)$
+
+## 栈和队列
+
+## 链表
 
 ## Star History
 
