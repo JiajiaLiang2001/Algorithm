@@ -302,6 +302,7 @@ $\mathrm{O}\left(n^{2}\right)$
   - `04-4-Contain-Find-and-Remove`
   - `04-5-Generic-Data-Structures`
   - `04-6-Dynamic-Array`
+  - `04-7-Amortized-Time-Complexity`
 
 封装属于我们的数组
 
@@ -360,6 +361,40 @@ $\mathrm{O}\left(n^{2}\right)$
 改：已知索引 $\mathrm{O}(1)$，未知索引 $\mathrm{O}(n)$
 
 查：已知索引 $\mathrm{O}(1)$，未知索引 $\mathrm{O}(n)$
+
+### 均摊复杂度
+
+**均摊复杂度**
+
+capacity=8，9次addLast：1 1 1 1 1 1 1 1 8+1 = 17
+
+> 平均2次基本操作
+
+**复杂度震荡**
+
+为了避免
+
+```java
+/**
+ * Remove array element
+ *
+ * @param index
+ * @return
+ */
+public E remove(int index) {
+    if (index < 0 || index >= size)
+        throw new IllegalArgumentException("Remove failed. Index is illegal.");
+    E ret = data[index];
+    for (int i = index + 1; i < data.length; i++) {
+        data[i - 1] = data[i];
+    }
+    size--;
+    data[size] = null;
+    if (size == data.length / 4 && data.length / 2 != 0)
+        resize(data.length / 2);
+    return ret;
+}
+```
 
 ## 栈和队列
 
