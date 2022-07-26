@@ -34,7 +34,7 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     /**
-     * push onto the stack
+     * Push onto the stack
      *
      * @param e
      */
@@ -44,7 +44,7 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     /**
-     * pop onto the stack
+     * Pop onto the stack
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     /**
-     * remove the top element from the stack
+     * Remove the top element from the stack
      *
      * @return
      */
