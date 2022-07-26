@@ -139,7 +139,7 @@ public class Array {
     }
 
     /**
-     * Remove an element to the beginning of array
+     * Remove an element to the end of the array
      *
      * @return
      */
@@ -148,7 +148,7 @@ public class Array {
     }
 
     /**
-     * Remove an element to the end of the array
+     * Remove an element to the beginning of array
      *
      * @return
      */
