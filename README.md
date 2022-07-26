@@ -5,11 +5,11 @@
   - [线性查找](#线性查找)
     - [常见的算法复杂度](#常见的算法复杂度)
       - [循环](#循环)
-      - [数字 n​ 的 x 进制位](#数字-n-的-x-进制位)
-      - [数字 n​ 的约数](#数字-n-的约数)
-      - [长度为 n​ 的二进制数字](#长度为-n-的二进制数字)
-      - [长度为 n​ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
-      - [判断数字 n​ 是否是偶数](#判断数字-n-是否是偶数)
+      - [数字 $n$ 的 $x$ 进制位](#数字-n-的-x-进制位)
+      - [数字 $n$ 的约数](#数字-n-的约数)
+      - [长度为 $n$ 的二进制数字](#长度为-n-的二进制数字)
+      - [长度为 $n$ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
+      - [判断数字 $n$ 是否是偶数](#判断数字-n-是否是偶数)
     - [时间复杂度大小比较](#时间复杂度大小比较)
   - [基础排序算法](#基础排序算法)
     - [选择排序法](#选择排序法)
@@ -23,7 +23,17 @@
     - [泛型数组](#泛型数组)
     - [动态数组](#动态数组)
     - [时间复杂度](#时间复杂度-2)
+    - [均摊复杂度](#均摊复杂度)
   - [栈和队列](#栈和队列)
+    - [栈](#栈)
+      - [复杂度分析](#复杂度分析)
+      - [栈的应用](#栈的应用)
+    - [队列](#队列)
+      - [数组队列](#数组队列)
+        - [复杂度分析](#复杂度分析-1)
+      - [循环队列](#循环队列)
+        - [复杂度分析](#复杂度分析-2)
+      - [两种实现方式对比](#两种实现方式对比)
   - [链表](#链表)
   - [Star History](#star-history)
 
@@ -304,7 +314,7 @@ $\mathrm{O}\left(n^{2}\right)$
   - `04-6-Dynamic-Array`
   - `04-7-Amortized-Time-Complexity`
 
-封装属于我们的数组
+封装属于我们的数组：
 
 1. data：数组
 2. capacity：数组最大容量
@@ -327,7 +337,6 @@ $\mathrm{O}\left(n^{2}\right)$
   - `void resize(int newCapacity)`
 - `E removeLast()`
 - `E removeFirst()`
-- `String toString()`
 
 ### 泛型数组
 
@@ -397,6 +406,95 @@ public E remove(int index) {
 ```
 
 ## 栈和队列
+
+**05-Stacks-and-Queues**
+
+- `05-1-Array-Stack`
+- `05-2-A-Stack-Problem-in-Leetcode`
+- `05-3-Array-Queue`
+
+### 栈
+
+封装属于我们的栈：
+
+- `ArrayStack()`
+
+- `ArrayStack(int capacity)`
+- `int getCapacity()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void push(E e)`
+- `E pop()`
+- `E peek()`
+
+#### 复杂度分析
+
+|        操作         |     时间复杂度      |
+| :-----------------: | :-----------------: |
+|   `int getSize()`   |   $\mathrm{O}(1)$   |
+| `boolean isEmpty()` |   $\mathrm{O}(1)$   |
+|  `void push(E e)`   | 均摊$\mathrm{O}(1)$ |
+|      `E pop()`      | 均摊$\mathrm{O}(1)$ |
+|     `E peek()`      |   $\mathrm{O}(1)$   |
+
+#### 栈的应用
+
+[[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)](https://leetcode.cn/problems/valid-parentheses/)
+
+```java
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(' || c == '[' || c == '{')
+                stack.push(c);
+            else {
+                if (stack.isEmpty()) return false;
+                else {
+                    char top = stack.pop();
+                    if ((c == ')' && top != '(') ||
+                        (c == ']' && top != '[') ||
+                        (c == '}' && top != '{'))
+                        return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+}
+```
+
+### 队列
+
+#### 数组队列
+
+封装属于我们的数组队列：
+
+- `ArrayQueue(int capacity)`
+- `ArrayQueue()`
+- `int getCapacity()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void enqueue(E e)`
+- `E dequeue()`
+- `E getFront()`
+
+##### 复杂度分析
+
+|        操作         |     时间复杂度      |
+| :-----------------: | :-----------------: |
+|   `int getSize()`   |   $\mathrm{O}(1)$   |
+| `boolean isEmpty()` |   $\mathrm{O}(1)$   |
+| `void enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
+|    `E dequeue()`    |   $\mathrm{O}(n)$   |
+|   `E getFront()`    |   $\mathrm{O}(1)$   |
+
+#### 循环队列
+
+##### 复杂度分析
+
+#### 两种实现方式对比
 
 ## 链表
 
