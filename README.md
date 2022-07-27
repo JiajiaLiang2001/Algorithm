@@ -5,11 +5,11 @@
   - [线性查找](#线性查找)
     - [常见的算法复杂度](#常见的算法复杂度)
       - [循环](#循环)
-      - [数字 $n$ 的 $x$ 进制位](#数字-n-的-x-进制位)
-      - [数字 $n$ 的约数](#数字-n-的约数)
-      - [长度为 $n$ 的二进制数字](#长度为-n-的二进制数字)
-      - [长度为 $n$ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
-      - [判断数字 $n$ 是否是偶数](#判断数字-n-是否是偶数)
+      - [数字 n 的 x 进制位](#数字-n-的-x-进制位)
+      - [数字 n 的约数](#数字-n-的约数)
+      - [长度为 n​ 的二进制数字](#长度为-n-的二进制数字)
+      - [长度为 n​ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
+      - [判断数字 n​ 是否是偶数](#判断数字-n-是否是偶数)
     - [时间复杂度大小比较](#时间复杂度大小比较)
   - [基础排序算法](#基础排序算法)
     - [选择排序法](#选择排序法)
@@ -34,6 +34,7 @@
       - [循环队列](#循环队列)
         - [复杂度分析](#复杂度分析-2)
       - [两种实现方式对比](#两种实现方式对比)
+      - [双端队列](#双端队列)
   - [链表](#链表)
   - [Star History](#star-history)
 
@@ -326,7 +327,6 @@ $\mathrm{O}\left(n^{2}\right)$
 - `int getSize()`
 - `boolean isEmpty()`
 - `void add(int index, E e)`
-  - `void resize(int newCapacity)`
 - `void addLast(E e)`
 - `void addFirst(E e)`
 - `E getElement(int index)`
@@ -334,7 +334,6 @@ $\mathrm{O}\left(n^{2}\right)$
 - `boolean contains(E e)`
 - `int find(E e)`
 - `E remove(int index)`
-  - `void resize(int newCapacity)`
 - `E removeLast()`
 - `E removeFirst()`
 
@@ -492,9 +491,68 @@ class Solution {
 
 #### 循环队列
 
+- 队列为空（front == tail）
+
+![Empty-Queue](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_4_1.png)
+
+- 队列为满（（tail + 1）% c == front）
+
+![Full-Queue](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_4_2.png)
+
+封装属于我们的循环队列：
+
+- `LoopQueue(int capacity)`
+- `LoopQueue()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void enqueue(E e)`
+- `E dequeue()`
+- `E getFront()`
+
+队列遍历的两种方式：
+
+```java
+for (int i = 0; i < size; i++)
+    data[(i + front) % data.length]
+```
+
+```java
+for (int i = front; i != tail; i = (i + 1) % data.length) {
+    data[i]
+}
+```
+
 ##### 复杂度分析
 
+|        操作         |     时间复杂度      |
+| :-----------------: | :-----------------: |
+|   `int getSize()`   |   $\mathrm{O}(1)$   |
+| `boolean isEmpty()` |   $\mathrm{O}(1)$   |
+| `void enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
+|    `E dequeue()`    | 均摊$\mathrm{O}(1)$ |
+|   `E getFront()`    |   $\mathrm{O}(1)$   |
+
 #### 两种实现方式对比
+
+![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_5_1.png)
+
+主要影响在于出队操作！
+
+#### 双端队列
+
+封装属于我们的双端队列：
+
+- `Deque(int capacity)`
+- `Deque()`
+- `int getCapacity()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void addLast(E e)`
+- `void addFirst(E e)` 
+- `E removeLast()`
+- `E removeFirst()`
+- `E getFront()`
+- `E getLast()`
 
 ## 链表
 
