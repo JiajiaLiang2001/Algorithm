@@ -428,13 +428,13 @@ public E remove(int index) {
 
 #### 复杂度分析
 
-|        操作         |     时间复杂度      |
-| :-----------------: | :-----------------: |
-|   `int getSize()`   |   $\mathrm{O}(1)$   |
-| `boolean isEmpty()` |   $\mathrm{O}(1)$   |
-|  `void push(E e)`   | 均摊$\mathrm{O}(1)$ |
-|      `E pop()`      | 均摊$\mathrm{O}(1)$ |
-|     `E peek()`      |   $\mathrm{O}(1)$   |
+|    操作     |     时间复杂度      |
+| :---------: | :-----------------: |
+| `getSize()` |   $\mathrm{O}(1)$   |
+| `isEmpty()` |   $\mathrm{O}(1)$   |
+| `push(E e)` | 均摊$\mathrm{O}(1)$ |
+|   `pop()`   | 均摊$\mathrm{O}(1)$ |
+|  `peek()`   |   $\mathrm{O}(1)$   |
 
 #### 栈的应用
 
@@ -481,13 +481,13 @@ class Solution {
 
 ##### 复杂度分析
 
-|        操作         |     时间复杂度      |
-| :-----------------: | :-----------------: |
-|   `int getSize()`   |   $\mathrm{O}(1)$   |
-| `boolean isEmpty()` |   $\mathrm{O}(1)$   |
-| `void enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
-|    `E dequeue()`    |   $\mathrm{O}(n)$   |
-|   `E getFront()`    |   $\mathrm{O}(1)$   |
+|      操作      |     时间复杂度      |
+| :------------: | :-----------------: |
+|  `getSize()`   |   $\mathrm{O}(1)$   |
+|  `isEmpty()`   |   $\mathrm{O}(1)$   |
+| `enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
+|  `dequeue()`   |   $\mathrm{O}(n)$   |
+|  `getFront()`  |   $\mathrm{O}(1)$   |
 
 #### 循环队列
 
@@ -524,15 +524,19 @@ for (int i = front; i != tail; i = (i + 1) % data.length) {
 
 ##### 复杂度分析
 
-|        操作         |     时间复杂度      |
-| :-----------------: | :-----------------: |
-|   `int getSize()`   |   $\mathrm{O}(1)$   |
-| `boolean isEmpty()` |   $\mathrm{O}(1)$   |
-| `void enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
-|    `E dequeue()`    | 均摊$\mathrm{O}(1)$ |
-|   `E getFront()`    |   $\mathrm{O}(1)$   |
+|      操作      |     时间复杂度      |
+| :------------: | :-----------------: |
+|  `getSize()`   |   $\mathrm{O}(1)$   |
+|  `isEmpty()`   |   $\mathrm{O}(1)$   |
+| `enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
+|  `dequeue()`   | 均摊$\mathrm{O}(1)$ |
+|  `getFront()`  |   $\mathrm{O}(1)$   |
 
 #### 两种实现方式对比
+
+```java
+private static int opCount = 100000;
+```
 
 ![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_5_1.png)
 
@@ -555,6 +559,113 @@ for (int i = front; i != tail; i = (i + 1) % data.length) {
 - `E getLast()`
 
 ## 链表
+
+- **06-Linked-List**
+  - `06-1-Linked-List`
+  - `06-2-Add-Elements-in-LinkedList`
+  - `06-3-DummyHead-in-LinkedList`
+  - `06-4-Query-and-Update-in-LinkedList`
+  - `06-5-Remove-Element-in-LinkedList`
+
+![Linked-List-Structure](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_1_1.png)
+
+![Linked-List-Structure](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_2_1.png)
+
+封装属于我们的链表：
+
+```java
+private class Node {
+    public E e;
+    public Node next;
+    public Node(E e, Node next) {
+        this.e = e;
+        this.next = next;
+    }
+    public Node(E e) {
+        this(e, null);
+    }
+    public Node() {
+        this(null, null);
+    }
+    @Override
+    public String toString() {
+        return e.toString();
+    }
+}
+```
+
+- `LinkedList()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void add(int index, E e)`
+- `void addFirst(E e)`
+- `void addLast(E e)`
+- `E get(int index)`
+- `E getFirst()`
+- `E getLast()`
+- `void set(int index, E e)`
+- `boolean contains(E e)`
+- `E remove(int index)`
+- `E removeFirst()`
+- `E removeLast()`
+
+#### 复杂度分析
+
+|     操作      |   时间复杂度    |
+| :-----------: | :-------------: |
+|  `getSize()`  | $\mathrm{O}(1)$ |
+|  `isEmpty()`  | $\mathrm{O}(1)$ |
+|     `add`     | $\mathrm{O}(n)$ |
+|  `addFirst`   | $\mathrm{O}(1)$ |
+|   `addLast`   | $\mathrm{O}(n)$ |
+|     `get`     | $\mathrm{O}(n)$ |
+|  `getFirst`   | $\mathrm{O}(1)$ |
+|   `getLast`   | $\mathrm{O}(n)$ |
+|     `set`     | $\mathrm{O}(n)$ |
+|  `contains`   | $\mathrm{O}(n)$ |
+|   `remove`    | $\mathrm{O}(n)$ |
+| `removeFirst` | $\mathrm{O}(1)$ |
+| `removeLast`  | $\mathrm{O}(n)$ |
+
+### 基于链表实现栈
+
+使用[链表](#链表)封装属于我们的栈：
+
+- `LinkedListStack()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void push(E e)`
+- `E pop()`
+- `E peek()`
+
+#### 链表栈和数组栈对比
+
+```java
+private static int opCount = 100000;
+```
+
+![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_7_1.png)
+
+### 基于链表实现队列
+
+使用[链表](#链表)封装属于我们的队列：
+
+- `LinkedListQueue()`
+- `int getSize()`
+- `boolean isEmpty()`
+- `void enqueue(E e)`
+- `E dequeue()`
+- `E getFront()`
+
+#### 链表队列和数组队列（单向和循环）对比
+
+```java
+private static int opCount = 100000;
+```
+
+![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_9_1.png)
+
+### 链表与递归
 
 ## Star History
 
