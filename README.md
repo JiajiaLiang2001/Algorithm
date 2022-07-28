@@ -438,7 +438,7 @@ public E remove(int index) {
 
 #### 栈的应用
 
-[[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)](https://leetcode.cn/problems/valid-parentheses/)
+https://leetcode.cn/problems/valid-parentheses/
 
 ```java
 class Solution {
@@ -666,6 +666,10 @@ private static int opCount = 100000;
 ![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_9_1.png)
 
 ### 链表与递归
+
+https://leetcode.cn/problems/remove-linked-list-elements/
+
+
 
 ## Star History
 
