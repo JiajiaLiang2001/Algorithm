@@ -1,5 +1,5 @@
 public class Main {
-    private static int opCount = 100000;
+    private static final int opCount = 100000;
 
     public static void main(String[] args) {
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
