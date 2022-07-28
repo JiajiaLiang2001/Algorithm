@@ -39,6 +39,12 @@ public class LinkedList<E> {
         return size == 0;
     }
 
+    /**
+     * Add node to linked list
+     *
+     * @param index
+     * @param e
+     */
     public void add(int index, E e) {
         if (index < 0 || index > size)
             throw new IllegalArgumentException("Add failed. Illegal index.");
@@ -54,10 +60,20 @@ public class LinkedList<E> {
         size++;
     }
 
+    /**
+     * Add the first element of the linked list
+     *
+     * @param e
+     */
     public void addFirst(E e) {
         add(0, e);
     }
 
+    /**
+     * Add the last element of the linked list
+     *
+     * @param e
+     */
     public void addLast(E e) {
         add(size, e);
     }

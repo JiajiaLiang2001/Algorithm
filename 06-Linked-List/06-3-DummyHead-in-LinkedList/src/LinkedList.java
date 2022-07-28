@@ -55,7 +55,7 @@ public class LinkedList<E> {
     }
 
     /**
-     * Add a node to the head of the linked list
+     * Add the first element of the linked list
      *
      * @param e
      */
@@ -64,7 +64,7 @@ public class LinkedList<E> {
     }
 
     /**
-     * Add a node to the end of the linked list
+     * Add the last element of the linked list
      *
      * @param e
      */
