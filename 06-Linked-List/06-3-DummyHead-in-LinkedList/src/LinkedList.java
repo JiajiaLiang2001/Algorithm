@@ -30,10 +30,20 @@ public class LinkedList<E> {
         size = 0;
     }
 
+    /**
+     * Get the size of the linked list
+     *
+     * @return
+     */
     public int getSize() {
         return size;
     }
 
+    /**
+     * Check if the linked list is empty
+     *
+     * @return
+     */
     public boolean isEmpty() {
         return size == 0;
     }
