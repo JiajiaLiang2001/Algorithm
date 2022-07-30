@@ -1,4 +1,4 @@
-# 数据结构与算法
+#  数据结构与算法
 
 - [数据结构与算法](#数据结构与算法)
 - [基础了解](#基础了解)
@@ -673,9 +673,61 @@ private static int opCount = 100000;
 
 ### 链表与递归
 
+#### 链表实践
+
 https://leetcode.cn/problems/remove-linked-list-elements/
 
+常规解法（分开讨论）：
 
+```java
+public ListNode removeElements(ListNode head, int val) {
+    while (head != null && head.val == val)
+        head = head.next;
+    if (head == null)
+        return null;
+    else {
+        ListNode prev = head;
+        while (prev.next != null)
+            if (prev.next.val == val)
+                prev.next = prev.next.next;
+            else
+                prev = prev.next;
+        return head;
+    }
+}
+```
+
+虚拟头节点：
+
+```java
+public ListNode removeElements(ListNode head, int val) {
+    ListNode dummyHead = new ListNode(-1);
+    dummyHead.next = head;
+    ListNode prev = dummyHead;
+    while (prev.next != null)
+        if (prev.next.val == val)
+            prev.next = prev.next.next;
+        else
+            prev = prev.next;
+    return dummyHead.next;
+}
+```
+
+#### 递归基础
+
+ $\operatorname{Sum}(\operatorname{arr}[0 \ldots n-1])=\operatorname{arr}[0]+\operatorname{Sum}(\operatorname{arr}[1 \ldots n-1])$
+
+ $\operatorname{Sum}(\operatorname{arr}[1 \ldots n-1])=\operatorname{arr}[1]+\operatorname{Sum}(\operatorname{arr}[2 \ldots n-1])$
+
+$......$
+
+$\operatorname{Sum}(\operatorname{arr}[n-1 \ldots n-1])=\operatorname{arr}[n-1]+\operatorname{Sum}([])$
+
+转换为最基本问题 $\operatorname{Sum}([])$ 的求解！
+
+递归解决[上述问题](#链表实践)
+
+![Recursive-Process-For-Removing-Elements](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_3_1.png)
 
 ## Star History
 
