@@ -1,21 +1,8 @@
 public class Sum {
-    /**
-     * Call the summation method entry
-     *
-     * @param arr
-     * @return
-     */
     public static int sum(int[] arr) {
         return sum(arr, 0);
     }
 
-    /**
-     * Calculate the sum of all numbers in the interval arr[l...n)
-     *
-     * @param arr
-     * @param l
-     * @return
-     */
     private static int sum(int[] arr, int l) {
         if (l == arr.length)
             return 0;

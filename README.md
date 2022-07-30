@@ -725,6 +725,31 @@ $\operatorname{Sum}(\operatorname{arr}[n-1 \ldots n-1])=\operatorname{arr}[n-1]+
 
 转换为最基本问题 $\operatorname{Sum}([])$ 的求解！
 
+```java
+private static int sum(int[] arr, int l) {
+    if (l == arr.length)
+        return 0;
+    return arr[l] + sum(arr, l + 1);
+}
+```
+
+举例：
+
+arr= [6,10]
+
+- sum(arr,0) 
+
+- sum(arr,1)
+
+- sum(arr,2) return 0
+
+- return arr[1] + sum(arr,2) = 10 + 0 = 10 (sum(arr,1))
+- return arr[0] + sum(arr,0) = 6 + 10 = 16 (sum(arr,0))
+
+
+
+#### 链表&递归
+
 递归解决[上述问题](#链表实践)
 
 ![Recursive-Process-For-Removing-Elements](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_3_1.png)
