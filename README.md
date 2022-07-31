@@ -872,6 +872,55 @@ class Node{
 
 ![Array-Linked-List](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png)
 
+### 链表相关习题
+
+https://leetcode.cn/problems/reverse-linked-list/
+
+#### 非递归
+
+```java
+public ListNode reverseList(ListNode head) {
+    ListNode pre = null;
+    ListNode cur = head;
+    while (cur != null) {
+        ListNode next = cur.next;
+        cur.next = pre;
+        pre = cur;
+        cur = next;
+    }
+    return pre;
+}
+```
+
+![Linked-List-Flip-Leetcode](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_1.png)
+
+![Linked-List-Flip-Non-Recursive-1-2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_2.png)
+
+![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_3.png)
+
+![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_4.png)
+
+![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_5.png)
+
+![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_6.png)
+
+#### 递归
+
+```java
+public ListNode reverseList(ListNode head) {
+    if (head == null || head.next == null)
+        return head;
+    ListNode rev = reverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return rev;
+}
+```
+
+![Linked-List-Flip-Leetcode](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_7.png)
+
+![Linked-List-Flip-Non-Recursive-*](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_8.png)
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
