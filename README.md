@@ -843,6 +843,35 @@ public ListNode removeElements(ListNode head, int val, int depth) {
 
 ![Recursive-LinkedList-remove](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_5_5.png)
 
+### 关于链表的更多
+
+```java
+class Node{
+    E e;
+    Node next,prev;
+}
+```
+
+![Doubly-Linked-List](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/doubly_linked_list.png)
+
+```java
+class Node{
+    E e;
+    Node next,prev;
+}
+```
+
+![Circular-Linked-List](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/circular_linked_list.png)
+
+```java
+class Node{
+    E e;
+    int next;
+}
+```
+
+![Array-Linked-List](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png)
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
