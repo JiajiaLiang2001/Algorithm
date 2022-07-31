@@ -5,11 +5,11 @@
   - [线性查找](#线性查找)
     - [常见的算法复杂度](#常见的算法复杂度)
       - [循环](#循环)
-      - [数字 n 的 x 进制位](#数字-n-的-x-进制位)
-      - [数字 n​ 的约数](#数字-n-的约数)
-      - [长度为 n​ 的二进制数字](#长度为-n-的二进制数字)
-      - [长度为 n​ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
-      - [判断数字 n​ 是否是偶数](#判断数字-n-是否是偶数)
+      - [数字 $n$ 的 $x$ 进制位](#数字-n-的-x-进制位)
+      - [数字 $n$ 的约数](#数字-n-的约数)
+      - [长度为 $n$ 的二进制数字](#长度为-n-的二进制数字)
+      - [长度为 $n$ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
+      - [判断数字 $n$ 是否是偶数](#判断数字-n-是否是偶数)
     - [时间复杂度大小比较](#时间复杂度大小比较)
   - [基础排序算法](#基础排序算法)
     - [选择排序法](#选择排序法)
@@ -428,6 +428,11 @@ public E remove(int index) {
 - `05-1-Array-Stack`
 - `05-2-A-Stack-Problem-in-Leetcode`
 - `05-3-Array-Queue`
+- `05-4-Loop-Queue`
+- `05-5-Queues-Comparison`
+- `05-6-Loop-Queue-without-Wasting-One-Space`
+- `05-7-Loop-Queue-without-Size-Member`
+- `05-8-Deque`
 
 ### 栈
 
@@ -583,6 +588,17 @@ private static int opCount = 100000;
   - `06-3-DummyHead-in-LinkedList`
   - `06-4-Query-and-Update-in-LinkedList`
   - `06-5-Remove-Element-in-LinkedList`
+  - 06-6-Implement-Stack-in-LinkedList
+  - `06-7-Compare-LinkedList-Stack-and-Array-Stack`
+  - `06-8-Implement-Queue-in-LinkedList`
+  - `06-9-Compare-LinkedList-Queue-LoopQueue-and-Array-Queue`
+- **07-Linked-List-and-Recursion**
+  - `07-1-Linked-List-Problems-in-Leetcode`
+  - `07-2-Recursion-Basics`
+  - `07-3-LinkedList-and-Recursion`
+  - `07-4-Recursive-Debugging`
+  - `07-5-Recursive-LinkedList`
+  - `07-6-Another-Linked-List-Problems-in-Leetcode`
 
 ![Linked-List-Structure](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_1_1.png)
 
