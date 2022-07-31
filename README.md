@@ -55,6 +55,10 @@
       - [递归](#递归)
   - [Star History](#star-history)
 
+img[src*="#width-full"] {
+ width: 100%;
+}
+
 # 基础了解
 
 ## 线性查找
@@ -136,7 +140,7 @@ $$
 
 **01_4_1**
 
-![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png)
+![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png#width-full)
 
 ## 基础排序算法
 
@@ -217,7 +221,7 @@ $\mathrm{O}\left(n^{2}\right)$
 
 **02_4_1**
 
-![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png){:height="25%" width="25%"}
+![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png)
 
 ### 插入排序法
 
