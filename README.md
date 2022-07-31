@@ -55,9 +55,12 @@
       - [递归](#递归)
   - [Star History](#star-history)
 
-img[src*="#width-full"] {
- width: 100%;
+<style>
+img{
+    width: 60%;
+    padding-left: 20%;
 }
+</style>
 
 # 基础了解
 
@@ -140,7 +143,7 @@ $$
 
 **01_4_1**
 
-![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png#width-full)
+![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png)
 
 ## 基础排序算法
 
