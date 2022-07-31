@@ -217,7 +217,7 @@ $\mathrm{O}\left(n^{2}\right)$
 
 **02_4_1**
 
-![Test-Performance]{:height="25%" width="25%"}(https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png)
+![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png){:height="25%" width="25%"}
 
 ### 插入排序法
 
