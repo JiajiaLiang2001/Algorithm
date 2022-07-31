@@ -47,6 +47,8 @@
         - [举例：arr= [6,10]](#举例arr-610)
       - [链表&递归](#链表递归)
         - [举例：6 -> 7 -> 8 -> null](#举例6---7---8---null)
+        - [tip：递归深度](#tip递归深度)
+        - [使用递归实现链表的操作](#使用递归实现链表的操作)
   - [Star History](#star-history)
 
 # 基础了解
@@ -791,7 +793,55 @@ $6 \rightarrow7 \rightarrow8 \rightarrow null$
 
 ##### tip：递归深度
 
+```java
+public ListNode removeElements(ListNode head, int val, int depth) {
+    String depthString = generateDepthString(depth);
+    System.out.print(depthString);
+    System.out.println("Call: remove " + val + " in " + head);
+    if (head == null) {
+        System.out.print(depthString);
+        System.out.println("Return: " + head);
+        return head;
+    }
+    ListNode res = removeElements(head.next, val, depth + 1);
+    System.out.print(depthString);
+    System.out.println("After remove " + val + ": " + res);
+    ListNode ret;
+    if (head.val == val)
+        ret = res;
+    else {
+        head.next = res;
+        ret = head;
+    }
+    System.out.print(depthString);
+    System.out.println("Return: " + ret);
+    return ret;
+}
+```
 
+![Recursive-Debugging](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_4_1.png)
+
+##### 使用递归实现链表的操作
+
+- *add*
+
+![Recursive-LinkedList-add](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_5_1.png)
+
+- *get*
+
+![Recursive-LinkedList-get](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_5_2.png)
+
+- *set*
+
+![Recursive-LinkedList-set](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_5_3.png)
+
+- *contains*
+
+![Recursive-LinkedList-contains](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_5_4.png)
+
+- *remove*
+
+![Recursive-LinkedList-remove](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_5_5.png)
 
 ## Star History
 
