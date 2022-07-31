@@ -5,11 +5,11 @@
   - [线性查找](#线性查找)
     - [常见的算法复杂度](#常见的算法复杂度)
       - [循环](#循环)
-      - [数字 n 的 x 进制位](#数字-n-的-x-进制位)
-      - [数字 n​ 的约数](#数字-n-的约数)
-      - [长度为 n 的二进制数字](#长度为-n-的二进制数字)
-      - [长度为 n 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
-      - [判断数字 n 是否是偶数](#判断数字-n-是否是偶数)
+      - [数字 $n$ 的 $x$ 进制位](#数字-n-的-x-进制位)
+      - [数字 $n$ 的约数](#数字-n-的约数)
+      - [长度为 $n$ 的二进制数字](#长度为-n-的二进制数字)
+      - [长度为 $n$ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
+      - [判断数字 $n$ 是否是偶数](#判断数字-n-是否是偶数)
     - [时间复杂度大小比较](#时间复杂度大小比较)
   - [基础排序算法](#基础排序算法)
     - [选择排序法](#选择排序法)
@@ -42,6 +42,11 @@
     - [基于链表实现队列](#基于链表实现队列)
       - [链表队列和数组队列（单向和循环）对比](#链表队列和数组队列单向和循环对比)
     - [链表与递归](#链表与递归)
+      - [链表实践](#链表实践)
+      - [递归基础](#递归基础)
+        - [举例：arr= [6,10]](#举例arr-610)
+      - [链表&递归](#链表递归)
+        - [举例：6 -> 7 -> 8 -> null](#举例6---7---8---null)
   - [Star History](#star-history)
 
 # 基础了解
@@ -733,9 +738,9 @@ private static int sum(int[] arr, int l) {
 }
 ```
 
-举例：
+##### 举例：arr= [6,10]
 
-arr= [6,10]
+$\operatorname{arr}=[6,10]$
 
 - sum(arr,0) 
 
@@ -746,13 +751,47 @@ arr= [6,10]
 - return arr[1] + sum(arr,2) = 10 + 0 = 10 (sum(arr,1))
 - return arr[0] + sum(arr,0) = 6 + 10 = 16 (sum(arr,0))
 
-
-
 #### 链表&递归
 
 递归解决[上述问题](#链表实践)
 
 ![Recursive-Process-For-Removing-Elements](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_3_1.png)
+
+```java
+public ListNode removeElements(ListNode head, int val) {
+    if (head == null) return null;// 1
+    head.next = removeElements(head.next, val); // 2
+    return head.val == val ? head.next : head;// 3
+}
+```
+
+##### 举例：6 -> 7 -> 8 -> null
+
+$6 \rightarrow7 \rightarrow8 \rightarrow null$
+
+- $head：6 \rightarrow7 \rightarrow8 \rightarrow null$：removeElements(head,6) 
+  - 1
+  - 2
+  - $head：7 \rightarrow8 \rightarrow null$：removeElements(head,6) 
+    - 1
+    - 2
+    - $head：8 \rightarrow null$：removeElements(head,6) 
+      - 1
+      - 2 
+      - $head：null$：removeElements(head,6) 
+        - 1：return null
+      - 8 -> null
+      - **3：return 8 -> null**
+  - 7 -> 8 -> null
+  - **3：return 8 -> null**
+- 6 -> 8 -> null
+- **3：return 6 -> 8 -> null**
+
+![Linked-List-Recursion-Diagram](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_3_2.png)
+
+##### tip：递归深度
+
+
 
 ## Star History
 
