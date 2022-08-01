@@ -134,8 +134,6 @@ $$
 \mathrm{O}(1)<\mathrm{O}(\log n)<\mathrm{O}(\sqrt{n})<\mathrm{O}(n)<\mathrm{O}(n \log n)<\mathrm{O}\left(n^{2}\right)<\mathrm{O}\left(2^{n}\right)<\mathrm{O}(n !)
 $$
 
-**01_4_1**
-
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png" title="Test-Performance" height="50%" width="50%">
 </div>
@@ -217,9 +215,9 @@ $$
 
 $\mathrm{O}\left(n^{2}\right)$
 
-**02_4_1**
-
-![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/02_4_1.png" title="Test-Performance" height="50%" width="50%">
+</div>
 
 ### 插入排序法
 
@@ -278,7 +276,9 @@ for (int i = 1; i < arr.length; i++) {// i = 0
 
 1 2 3 4 5 6 
 
-![Test-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_1_1.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_1_1.png" title="Test-Performance" height="50%" width="50%">
+</div>
 
 #### 插入排序算法优化
 
@@ -305,7 +305,9 @@ for (int i = 1; i < arr.length; i++) {// i = 0
 }
 ```
 
-![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_2_1.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_2_1.png" title="Compare-Performance" height="50%" width="50%">
+</div>
 
 #### 时间复杂度
 
@@ -315,7 +317,9 @@ $\mathrm{O}\left(n^{2}\right)$
 
 对于有序数组，插入排序的复杂度是 $O(n)$。因此，插入排序的复杂度小于等于选择排序。
 
-![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_3_1.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_3_1.png" title="Compare-Performance" height="50%" width="50%">
+</div>
 
 # 数据结构
 
@@ -358,11 +362,15 @@ $\mathrm{O}\left(n^{2}\right)$
 
 ### 泛型数组
 
-![Generic-Array](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_5_1.png)
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_5_1.png" title="Generic-Array" height="50%" width="50%">
+</div>
 
 ### 动态数组
 
-![Dynamic-Array](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_6_1.png)
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_6_1.png" title="Dynamic-Array" height="50%" width="50%">
+</div>
 
 ### 时间复杂度
 
@@ -562,7 +570,9 @@ for (int i = front; i != tail; i = (i + 1) % data.length) {
 private static int opCount = 100000;
 ```
 
-![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_5_1.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_5_1.png" title="Compare-Performance" height="50%" width="50%">
+</div>
 
 主要影响在于出队操作！
 
@@ -602,9 +612,13 @@ private static int opCount = 100000;
   - `07-5-Recursive-LinkedList`
   - `07-6-Another-Linked-List-Problems-in-Leetcode`
 
-![Linked-List-Structure](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_1_1.png)
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_1_1.png" title="Linked-List-Structure" height="50%" width="50%">
+</div>
 
-![Linked-List-Structure](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_2_1.png)
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_2_1.png" title="Linked-List-Structure" height="50%" width="50%">
+</div>
 
 封装属于我们的链表：
 
@@ -679,7 +693,9 @@ private class Node {
 private static int opCount = 100000;
 ```
 
-![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_7_1.png)
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_7_1.png" title="Compare-Performance" height="50%" width="50%">
+</div>
 
 ### 基于链表实现队列
 
@@ -698,7 +714,9 @@ private static int opCount = 100000;
 private static int opCount = 100000;
 ```
 
-![Compare-Performance](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_9_1.png)
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_9_1.png" title="Compare-Performance" height="50%" width="50%">
+</div>
 
 ### 链表与递归
 
@@ -841,7 +859,9 @@ public ListNode removeElements(ListNode head, int val, int depth) {
 }
 ```
 
-![Recursive-Debugging](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_4_1.png)
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_4_1.png" title="Recursive-Debugging" height="50%" width="50%">
+</div>
 
 ##### 使用递归实现链表的操作
 
@@ -874,7 +894,9 @@ class Node{
 }
 ```
 
-![Doubly-Linked-List](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/doubly_linked_list.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/doubly_linked_list.png" title="Doubly-Linked-List" height="50%" width="50%">
+</div>
 
 ```java
 class Node{
@@ -883,7 +905,9 @@ class Node{
 }
 ```
 
-![Circular-Linked-List](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/circular_linked_list.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/circular_linked_list.png" title="Doubly-Linked-List" height="50%" width="50%">
+</div>
 
 ```java
 class Node{
@@ -892,7 +916,9 @@ class Node{
 }
 ```
 
-![Array-Linked-List](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png" title="Array-Linked-List" height="50%" width="50%">
+</div>
 
 ### 链表相关习题
 
@@ -914,17 +940,16 @@ public ListNode reverseList(ListNode head) {
 }
 ```
 
-![Linked-List-Flip-Leetcode](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_1.png)
+|                             初步                             |                             1-2                              |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![Linked-List-Flip-Leetcode](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_1.png) | ![Linked-List-Flip-Non-Recursive-1-2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_2.png) |
 
-![Linked-List-Flip-Non-Recursive-1-2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_2.png)
-
-![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_3.png)
-
-![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_4.png)
-
-![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_5.png)
-
-![Linked-List-Flip-Non-Recursive-3-456](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_6.png)
+<div align=left>
+  	<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_3.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
+	<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_4.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
+    <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_5.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
+    <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_6.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
+</div>
 
 #### 递归
 
