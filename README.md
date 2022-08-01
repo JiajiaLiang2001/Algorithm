@@ -136,7 +136,9 @@ $$
 
 **01_4_1**
 
-<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png" title="Test-Performance" height="50%" width="50%">
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png" title="Test-Performance" height="50%" width="50%">
+</div>
 
 ## 基础排序算法
 
