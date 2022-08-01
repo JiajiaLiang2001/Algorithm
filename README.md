@@ -5,11 +5,11 @@
   - [线性查找](#线性查找)
     - [常见的算法复杂度](#常见的算法复杂度)
       - [循环](#循环)
-      - [数字 $n$ 的 $x$ 进制位](#数字-n-的-x-进制位)
-      - [数字 $n$ 的约数](#数字-n-的约数)
-      - [长度为 $n$ 的二进制数字](#长度为-n-的二进制数字)
-      - [长度为 $n$ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
-      - [判断数字 $n$ 是否是偶数](#判断数字-n-是否是偶数)
+      - [数字 n​ 的 x 进制位](#数字-n-的-x-进制位)
+      - [数字 n​ 的约数](#数字-n-的约数)
+      - [长度为 n​ 的二进制数字](#长度为-n-的二进制数字)
+      - [长度为 n​ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
+      - [判断数字 n​ 是否是偶数](#判断数字-n-是否是偶数)
     - [时间复杂度大小比较](#时间复杂度大小比较)
   - [基础排序算法](#基础排序算法)
     - [选择排序法](#选择排序法)
@@ -525,11 +525,15 @@ class Solution {
 
 - 队列为空（front == tail）
 
-![Empty-Queue](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_4_1.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_4_1.png" title="Empty-Queue" height="50%" width="50%">
+</div>
 
 - 队列为满（（tail + 1）% c == front）
 
-![Full-Queue](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_4_2.png)
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_4_2.png" title="Full-Queue" height="50%" width="50%">
+</div>
 
 封装属于我们的循环队列：
 
@@ -612,12 +616,9 @@ private static int opCount = 100000;
   - `07-5-Recursive-LinkedList`
   - `07-6-Another-Linked-List-Problems-in-Leetcode`
 
-<div align=left>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_1_1.png" title="Linked-List-Structure" height="50%" width="50%">
-</div>
-
-<div align=left>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_2_1.png" title="Linked-List-Structure" height="50%" width="50%">
+<div align=center>
+  	<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_1_1.png" title="Linked-List-Structure" height="50%" width="50%">
+    <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_2_1.png" title="Linked-List-Structure" height="50%" width="50%">
 </div>
 
 封装属于我们的链表：
@@ -693,7 +694,7 @@ private class Node {
 private static int opCount = 100000;
 ```
 
-<div align=left>
+<div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_7_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
 
@@ -714,7 +715,7 @@ private static int opCount = 100000;
 private static int opCount = 100000;
 ```
 
-<div align=left>
+<div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_9_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
 
