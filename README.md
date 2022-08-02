@@ -1038,6 +1038,25 @@ if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
 
 #### 优化二（插入排序）
 
+在优化一的基础上测试
+
+```java
+if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
+    merge(arr, l, mid, r);
+```
+
+同其他排序（选择排序、插入排序）比较
+
+| 随机数组                                                     | 有序数组                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_1.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_2.png) |
+
+优化前后自身比较
+
+| 随机数组                                                     | 有序数组                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_4.png) |
+
 ## 快速排序
 
 ## 二分查找

@@ -1,6 +1,9 @@
+import java.awt.image.Kernel;
 import java.util.Arrays;
 
 public class MergeSort {
+    private static final int K = 15;
+
     private MergeSort() {
     }
 
@@ -21,7 +24,10 @@ public class MergeSort {
     }
 
     private static <E extends Comparable<E>> void sort2(E[] arr, int l, int r) {
-        if (l >= r) return;
+        if (r - l <= K) {
+            InsertionSort.sort(arr, l, r);
+            return;
+        }
         int mid = l + (r - l) / 2;
         sort2(arr, l, mid);
         sort2(arr, mid + 1, r);
