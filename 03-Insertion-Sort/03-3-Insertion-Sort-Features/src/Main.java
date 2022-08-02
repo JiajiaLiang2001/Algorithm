@@ -13,7 +13,7 @@ public class Main {
 
             System.out.println("Ordered Array : ");
             data1 = ArrayGenerator.generateOrderedArray(n);
-            data2 = Arrays.copyOf(data1, data2.length);
+            data2 = Arrays.copyOf(data1, data1.length);
             SortingHelper.sortTest("SelectionSort", data1);
             SortingHelper.sortTest("InsertionSort", data2);
 

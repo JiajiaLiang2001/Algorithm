@@ -984,6 +984,8 @@ public ListNode reverseList(ListNode head) {
 - **08-MergeSort**
   - `08-1-MergeSort`
   - `08-2-MergeSort-Track`
+  - `08-3-MergeSort-Complexity`
+  - `08-4-MergeSort-Basic-Optimization`
 
 **算法模板**：
 
@@ -1015,6 +1017,26 @@ MergerSort(arr,l,r){
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_3_1.png" title="Test-Performance" height="50%" width="50%">
 </div>
+#### 优化（增加判断）
+
+```java
+if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
+    merge(arr, l, mid, r);
+```
+
+同其他排序（选择排序、插入排序）比较
+
+| 随机数组                                                     | 有序数组                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_4_1.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_4_2.png) |
+
+优化前后自身比较
+
+| 随机数组                                                     | 有序数组                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_4_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_4_4.png) |
+
+#### 优化二（插入排序）
 
 ## 快速排序
 
