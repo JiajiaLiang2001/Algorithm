@@ -973,6 +973,10 @@ public ListNode reverseList(ListNode head) {
 
 ## 归并排序
 
+- **08-MergeSort**
+  - `08-1-MergeSort`
+  - `08-2-MergeSort-Track`
+
 **算法模板**：
 
 ```java
@@ -988,7 +992,17 @@ MergerSort(arr,l,r){
 }
 ```
 
+### 图解
 
+![MergeSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_1_1.png)
+
+#### 打印跟踪
+
+<div align=left>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_2_1.png" title="MergeSort-Track" height="50%" width="50%">
+</div>
+
+### 时间复杂度大小比较
 
 
 
