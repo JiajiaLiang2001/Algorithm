@@ -946,10 +946,10 @@ public ListNode reverseList(ListNode head) {
 | ![Linked-List-Flip-Leetcode](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_1.png) | ![Linked-List-Flip-Non-Recursive-1-2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_2.png) |
 
 <div align=left>
-  	<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_3.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
-	<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_4.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
-    <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_5.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
-    <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_6.png" title="Linked-List-Flip-Non-Recursive-3-456" height="50%" width="50%">
+  	<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_3.png" title="Linked-List-Flip-Non-Recursive-3-456-1" height="50%" width="50%">
+	<img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_4.png" title="Linked-List-Flip-Non-Recursive-3-456-2" height="50%" width="50%">
+    <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_5.png" title="Linked-List-Flip-Non-Recursive-3-456-3" height="50%" width="50%">
+    <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_6.png" title="Linked-List-Flip-Non-Recursive-3-456-4" height="50%" width="50%">
 </div>
 
 #### 递归
@@ -969,6 +969,35 @@ public ListNode reverseList(ListNode head) {
 
 ![Linked-List-Flip-Non-Recursive-*](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_8.png)
 
-## Star History
+# 递归
+
+## 归并排序
+
+**算法模板**：
+
+```java
+MergerSort(arr,l,r){
+	if(l >= r) return;
+	int mid = (l + r) / 2;
+    // 对arr[l,mid]进行排序
+	MergerSort(arr,l,mid);
+    // 对arr[mid+1,r]进行排序
+	MergerSort(arr,mid+1,r);
+    //将arr[l,mid]和arr[mid+1,r]合并
+	merge(arr,l,mid,r);
+}
+```
+
+
+
+
+
+## 快速排序
+
+## 二分查找
+
+## 二分搜索树
+
+# Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
