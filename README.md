@@ -5,11 +5,11 @@
   - [线性查找](#线性查找)
     - [常见的算法复杂度](#常见的算法复杂度)
       - [循环](#循环)
-      - [数字 $n$ 的 $x$ 进制位](#数字-n-的-x-进制位)
-      - [数字 $n$ 的约数](#数字-n-的约数)
-      - [长度为 $n$ 的二进制数字](#长度为-n-的二进制数字)
-      - [长度为 $n$ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
-      - [判断数字 $n$ 是否是偶数](#判断数字-n-是否是偶数)
+      - [数字 n​ 的 x 进制位](#数字-n-的-x-进制位)
+      - [数字 n​ 的约数](#数字-n-的约数)
+      - [长度为 n​ 的二进制数字](#长度为-n-的二进制数字)
+      - [长度为 n​ 的数组的所有排列组合](#长度为-n-的数组的所有排列组合)
+      - [判断数字 n​ 是否是偶数](#判断数字-n-是否是偶数)
     - [时间复杂度大小比较](#时间复杂度大小比较)
   - [基础排序算法](#基础排序算法)
     - [选择排序法](#选择排序法)
@@ -997,6 +997,8 @@ public ListNode reverseList(ListNode head) {
   - `08-4-MergeSort-Basic-Optimization`
   - `08-5-MergeSort-Advanced-Optimization`
   - `08-6-MergeSort-Memory-Optimization`
+  - `08-7-Bottom-Up`
+  - `08-8-Bottom-Up-Optimization`
 
 **算法模板**：
 
@@ -1131,7 +1133,7 @@ public static <E extends Comparable<E>> void sortBU(E[] arr) {
 
 - size = 2（i < 4）
   - i = 0
-    - [0,3] [2,3] `merge(arr, 0, 1, 3, temp);`
+    - [0,1] [2,3] `merge(arr, 0, 1, 3, temp);`
 
 ***2 3 4 6 1 5***
 
@@ -1166,9 +1168,9 @@ public static <E extends Comparable<E>> void sortBU2(E[] arr) {
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_8_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
+### 逆序对
 
-
-
+https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 
 
 ## 快速排序
