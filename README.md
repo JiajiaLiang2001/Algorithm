@@ -401,9 +401,9 @@ $\mathrm{O}\left(n^{2}\right)$
 
 总结：
 
-增：$\mathrm{O}(n)$
+增： $\mathrm{O}(n)$
 
-删：$\mathrm{O}(n)$
+删： $\mathrm{O}(n)$
 
 改：已知索引 $\mathrm{O}(1)$，未知索引 $\mathrm{O}(n)$
 
@@ -985,6 +985,8 @@ public ListNode reverseList(ListNode head) {
 
 ## 归并排序
 
+### 自顶向下
+
 - **08-MergeSort**
   - `08-1-MergeSort`
   - `08-2-MergeSort-Track`
@@ -1008,7 +1010,7 @@ MergerSort(arr,l,r){
 }
 ```
 
-### 图解
+#### 图解
 
 ![MergeSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_1_1.png)
 
@@ -1018,7 +1020,7 @@ MergerSort(arr,l,r){
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_2_1.png" title="MergeSort-Track" height="50%" width="50%">
 </div>
 
-### 时间复杂度大小比较
+#### 时间复杂度大小比较
 
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_3_1.png" title="Test-Performance" height="50%" width="50%">
@@ -1096,7 +1098,45 @@ for (int k = l; k <= r; k++) {
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_4.png) |
 
-### 自底向上归并排序
+### 自底向上
+
+```java
+public static <E extends Comparable<E>> void sortBU(E[] arr) {
+    int n = arr.length;
+    E[] temp = Arrays.copyOf(arr, n);
+    for (int size = 1; size < n; size += size) {
+        // Merge [i , i + sz -1] and [i + sz , min(i + 2 * sz -1 , n - 1)]
+        for (int i = 0; i + size < n; i += 2 * size)
+            merge(arr, i, i + size - 1, Math.min(i + 2 * size - 1, n - 1), temp);
+    }
+}
+```
+
+***6 4 2 3 1 5***
+
+------
+
+- size = 1（i < 5）
+  - i = 0
+    - [0] [1] `merge(arr, 0, 0, 1, temp);`
+  - i = 2
+    - [2] [3] `merge(arr, 2, 2, 3, temp);`
+  - i = 4
+    - [4] [5] `merge(arr, 4, 4, 5, temp);`
+
+***4 6 2 3 1 5***
+
+- size = 2（i < 4）
+  - i = 0
+    - [0,3] [2,3] `merge(arr, 0, 1, 3, temp);`
+
+***2 3 4 6 1 5***
+
+- size = 4（i < 2）
+  - i = 0
+    - [0,3] [4,5] `merge(arr, 0, 3, 5, temp);`
+
+***1 2 3 4 5 6***
 
 ## 快速排序
 

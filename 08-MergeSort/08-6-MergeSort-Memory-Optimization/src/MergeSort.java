@@ -19,19 +19,19 @@ public class MergeSort {
     }
 
     public static <E extends Comparable<E>> void sort2(E[] arr) {
-        E[] temp = Arrays.copyOf(arr, arr.length);
+        E[] temp = Arrays.copyOf(arr, arr.length);// 3.Temporary storage array
         sort2(arr, 0, arr.length - 1, temp);
     }
 
     private static <E extends Comparable<E>> void sort2(E[] arr, int l, int r, E[] temp) {
         if (r - l <= K) {
-            InsertionSort.sort(arr, l, r);
+            InsertionSort.sort(arr, l, r);// 2.Insertion sort for small arrays
             return;
         }
         int mid = l + (r - l) / 2;
         sort2(arr, l, mid, temp);
         sort2(arr, mid + 1, r, temp);
-        if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1]
+        if (arr[mid].compareTo(arr[mid + 1]) > 0)// 1.The previous array interval is less than the next array interval : arr[mid] < arr[mid + 1]
             merge2(arr, l, mid, r, temp);
     }
 
