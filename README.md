@@ -999,6 +999,7 @@ public ListNode reverseList(ListNode head) {
   - `08-6-MergeSort-Memory-Optimization`
   - `08-7-Bottom-Up`
   - `08-8-Bottom-Up-Optimization`
+  - `08-9-Reverse-Pairs`
 
 **算法模板**：
 
@@ -1030,7 +1031,9 @@ MergerSort(arr,l,r){
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_3_1.png" title="Test-Performance" height="50%" width="50%">
 </div>
-#### 优化（增加判断）
+
+
+#### 优化一（增加判断）
 
 ```java
 if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
@@ -1147,6 +1150,7 @@ public static <E extends Comparable<E>> void sortBU(E[] arr) {
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_7_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
 
+
 #### 优化（插入排序）
 
 ```java
@@ -1168,12 +1172,15 @@ public static <E extends Comparable<E>> void sortBU2(E[] arr) {
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_8_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
+
+
 ### 逆序对
 
 https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 
-
 ## 快速排序
+
+
 
 ## 二分查找
 
