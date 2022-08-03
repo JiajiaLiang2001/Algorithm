@@ -58,6 +58,10 @@
     - [图解](#图解)
       - [打印跟踪](#打印跟踪)
     - [时间复杂度大小比较](#时间复杂度大小比较-1)
+      - [优化（增加判断）](#优化增加判断)
+      - [优化二（插入排序）](#优化二插入排序)
+      - [优化三（临时空间）](#优化三临时空间)
+    - [自底向上归并排序](#自底向上归并排序)
   - [快速排序](#快速排序)
   - [二分查找](#二分查找)
   - [二分搜索树](#二分搜索树)
@@ -468,13 +472,13 @@ public E remove(int index) {
 
 #### 复杂度分析
 
-|    操作     |     时间复杂度      |
-| :---------: | :-----------------: |
-| `getSize()` |   $\mathrm{O}(1)$   |
-| `isEmpty()` |   $\mathrm{O}(1)$   |
-| `push(E e)` | 均摊$\mathrm{O}(1)$ |
-|   `pop()`   | 均摊$\mathrm{O}(1)$ |
-|  `peek()`   |   $\mathrm{O}(1)$   |
+|    操作     |      时间复杂度      |
+| :---------: | :------------------: |
+| `getSize()` |   $\mathrm{O}(1)$    |
+| `isEmpty()` |   $\mathrm{O}(1)$    |
+| `push(E e)` | 均摊 $\mathrm{O}(1)$ |
+|   `pop()`   | 均摊 $\mathrm{O}(1)$ |
+|  `peek()`   |   $\mathrm{O}(1)$    |
 
 #### 栈的应用
 
@@ -521,13 +525,13 @@ class Solution {
 
 ##### 复杂度分析
 
-|      操作      |     时间复杂度      |
-| :------------: | :-----------------: |
-|  `getSize()`   |   $\mathrm{O}(1)$   |
-|  `isEmpty()`   |   $\mathrm{O}(1)$   |
-| `enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
-|  `dequeue()`   |   $\mathrm{O}(n)$   |
-|  `getFront()`  |   $\mathrm{O}(1)$   |
+|      操作      |      时间复杂度      |
+| :------------: | :------------------: |
+|  `getSize()`   |   $\mathrm{O}(1)$    |
+|  `isEmpty()`   |   $\mathrm{O}(1)$    |
+| `enqueue(E e)` | 均摊 $\mathrm{O}(1)$ |
+|  `dequeue()`   |   $\mathrm{O}(n)$    |
+|  `getFront()`  |   $\mathrm{O}(1)$    |
 
 #### 循环队列
 
@@ -568,13 +572,13 @@ for (int i = front; i != tail; i = (i + 1) % data.length) {
 
 ##### 复杂度分析
 
-|      操作      |     时间复杂度      |
-| :------------: | :-----------------: |
-|  `getSize()`   |   $\mathrm{O}(1)$   |
-|  `isEmpty()`   |   $\mathrm{O}(1)$   |
-| `enqueue(E e)` | 均摊$\mathrm{O}(1)$ |
-|  `dequeue()`   | 均摊$\mathrm{O}(1)$ |
-|  `getFront()`  |   $\mathrm{O}(1)$   |
+|      操作      |      时间复杂度      |
+| :------------: | :------------------: |
+|  `getSize()`   |   $\mathrm{O}(1)$    |
+|  `isEmpty()`   |   $\mathrm{O}(1)$    |
+| `enqueue(E e)` | 均摊 $\mathrm{O}(1)$ |
+|  `dequeue()`   | 均摊 $\mathrm{O}(1)$ |
+|  `getFront()`  |   $\mathrm{O}(1)$    |
 
 #### 两种实现方式对比
 
@@ -1091,6 +1095,8 @@ for (int k = l; k <= r; k++) {
 | 随机数组                                                     | 有序数组                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_4.png) |
+
+### 自底向上归并排序
 
 ## 快速排序
 
