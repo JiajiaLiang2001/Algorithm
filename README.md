@@ -147,8 +147,9 @@ $$
 $$
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png" title="Test-Performance" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/01_4_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
+
 
 ## 基础排序算法
 
@@ -1137,6 +1138,36 @@ public static <E extends Comparable<E>> void sortBU(E[] arr) {
     - [0,3] [4,5] `merge(arr, 0, 3, 5, temp);`
 
 ***1 2 3 4 5 6***
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_7_1.png" title="Compare-Performance" height="50%" width="50%">
+</div>
+
+#### 优化（插入排序）
+
+```java
+public static <E extends Comparable<E>> void sortBU2(E[] arr) {
+    int n = arr.length;
+    E[] temp = Arrays.copyOf(arr, n);
+    for (int i = 0; i < n; i += K + 1)
+        InsertionSort.sort(arr, i, Math.min(n - 1, i + K));
+    for (int size = K + 1; size < n; size += size) {
+        // Merge [i , i + sz -1] and [i + sz , min(i + 2 * sz -1 , n - 1)]
+        for (int i = 0; i + size < n; i += 2 * size) {
+            int l = i, mid = i + size - 1, r = Math.min(i + 2 * size - 1, n - 1);
+            merge(arr, l, mid, r, temp);
+        }
+    }
+}
+```
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_8_1.png" title="Compare-Performance" height="50%" width="50%">
+</div>
+
+
+
+
 
 ## 快速排序
 
