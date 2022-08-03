@@ -15,26 +15,27 @@ public class MergeSort {
         int mid = l + (r - l) / 2;
         sort1(arr, l, mid);
         sort1(arr, mid + 1, r);
-        merge(arr, l, mid, r);
+        merge1(arr, l, mid, r);
     }
 
     public static <E extends Comparable<E>> void sort2(E[] arr) {
-        sort2(arr, 0, arr.length - 1);
+        E[] temp = Arrays.copyOf(arr, arr.length);
+        sort2(arr, 0, arr.length - 1, temp);
     }
 
-    private static <E extends Comparable<E>> void sort2(E[] arr, int l, int r) {
+    private static <E extends Comparable<E>> void sort2(E[] arr, int l, int r, E[] temp) {
         if (r - l <= K) {
             InsertionSort.sort(arr, l, r);
             return;
         }
         int mid = l + (r - l) / 2;
-        sort2(arr, l, mid);
-        sort2(arr, mid + 1, r);
+        sort2(arr, l, mid, temp);
+        sort2(arr, mid + 1, r, temp);
         if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1]
-            merge(arr, l, mid, r);
+            merge2(arr, l, mid, r, temp);
     }
 
-    private static <E extends Comparable<E>> void merge(E[] arr, int l, int mid, int r) {
+    private static <E extends Comparable<E>> void merge1(E[] arr, int l, int mid, int r) {
         E[] temp = Arrays.copyOfRange(arr, l, r + 1);
         int i = l, j = mid + 1;
         for (int k = l; k <= r; k++) {
@@ -51,6 +52,21 @@ public class MergeSort {
                 arr[k] = temp[j - l];
                 j++;
             }
+        }
+    }
+
+    private static <E extends Comparable<E>> void merge2(E[] arr, int l, int mid, int r, E[] temp) {
+        System.arraycopy(arr, l, temp, l, r - l + 1);
+        int i = l, j = mid + 1;
+        for (int k = l; k <= r; k++) {
+            if (i > mid)
+                arr[k] = temp[j++];
+            else if (j > r)
+                arr[k] = temp[i++];
+            else if (temp[i].compareTo(temp[j]) <= 0)
+                arr[k] = temp[i++];
+            else
+                arr[k] = temp[j++];
         }
     }
 }

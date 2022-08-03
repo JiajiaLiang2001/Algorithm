@@ -11,7 +11,7 @@ public class Main {
 //            Integer[] data3 = Arrays.copyOf(data1, data1.length);
 //            SortingHelper.sortTest("SelectionSort", data1);
 //            SortingHelper.sortTest("InsertionSort", data2);
-//            SortingHelper.sortTest("MergeSort1", data3);
+//            SortingHelper.sortTest("MergeSort2", data3);
 
 //            System.out.println("Ordered Array : ");
 //            Integer[] data1 = ArrayGenerator.generateOrderedArray(n);
@@ -19,7 +19,7 @@ public class Main {
 //            Integer[] data3 = Arrays.copyOf(data1, data1.length);
 //            SortingHelper.sortTest("SelectionSort", data1);
 //            SortingHelper.sortTest("InsertionSort", data2);
-//            SortingHelper.sortTest("MergeSort", data3);
+//            SortingHelper.sortTest("MergeSort2", data3);
 
 //            System.out.println("Random Array : ");
 //            Integer[] arr1 = ArrayGenerator.generateRandomArray(n, n);

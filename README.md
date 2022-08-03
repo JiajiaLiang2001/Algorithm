@@ -207,7 +207,7 @@ for (int i = 0; i < arr.length - 1; i++) {//i < arr.length
 
 下一步可以省略：
 
-（i = 5$，$j = 5​）：遍历（​minIndex = 5​）
+（i = 5​，​j = 5​）：遍历（​minIndex = 5​）
 
 1 2 3 4 5 6
 
@@ -986,6 +986,8 @@ public ListNode reverseList(ListNode head) {
   - `08-2-MergeSort-Track`
   - `08-3-MergeSort-Complexity`
   - `08-4-MergeSort-Basic-Optimization`
+  - `08-5-MergeSort-Advanced-Optimization`
+  - `08-6-MergeSort-Memory-Optimization`
 
 **算法模板**：
 
@@ -1056,6 +1058,39 @@ if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
 | 随机数组                                                     | 有序数组                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_4.png) |
+
+#### 优化三（临时空间）
+
+在优化一、二的基础上测试
+
+```java
+E[] temp = Arrays.copyOf(arr, arr.length);
+...
+System.arraycopy(arr, l, temp, l, r - l + 1);
+int i = l, j = mid + 1;
+for (int k = l; k <= r; k++) {
+    if (i > mid)
+        arr[k] = temp[j++];
+    else if (j > r)
+        arr[k] = temp[i++];
+    else if (temp[i].compareTo(temp[j]) <= 0)
+        arr[k] = temp[i++];
+    else
+        arr[k] = temp[j++];
+}
+```
+
+同其他排序（选择排序、插入排序）比较
+
+| 随机数组                                                     | 有序数组                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_1.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_2.png) |
+
+优化前后自身比较
+
+| 随机数组                                                     | 有序数组                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_6_4.png) |
 
 ## 快速排序
 
