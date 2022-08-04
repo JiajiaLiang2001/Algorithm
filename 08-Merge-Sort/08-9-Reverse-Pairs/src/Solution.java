@@ -4,16 +4,16 @@
 public class Solution {
     public int reversePairs(int[] nums) {
         int[] temp = new int[nums.length];
-        return sort(nums, 0, nums.length - 1, temp);
+        return mergeSort(nums, 0, nums.length - 1, temp);
     }
 
-    private int sort(int[] nums, int l, int r, int[] temp) {
+    private int mergeSort(int[] nums, int l, int r, int[] temp) {
         if (l >= r)
             return 0;
         int mid = l + (r - l) / 2;
         int res = 0;
-        res += sort(nums, l, mid, temp);
-        res += sort(nums, mid + 1, r, temp);
+        res += mergeSort(nums, l, mid, temp);
+        res += mergeSort(nums, mid + 1, r, temp);
         if (nums[mid] > nums[mid + 1])
             res += merge(nums, l, mid, r, temp);
         return res;
