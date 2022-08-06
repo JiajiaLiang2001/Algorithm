@@ -1,4 +1,4 @@
-#  数据结构与算法
+#  	数据结构与算法
 
 - [数据结构与算法](#数据结构与算法)
 - [基础了解](#基础了解)
@@ -1183,6 +1183,12 @@ https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 ![QuickSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_1_1.png)
 
 ![Partition](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_1_2.png)
+
+### 相关问题
+
+对于有序数组：
+
+![QuickSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_2_1.png)
 
 ## 二分查找
 
