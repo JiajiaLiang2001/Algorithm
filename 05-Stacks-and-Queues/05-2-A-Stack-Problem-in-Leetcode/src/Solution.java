@@ -1,3 +1,6 @@
+/// Leetcode 20. Valid Parentheses
+/// https://leetcode.cn/problems/valid-parentheses/
+
 import java.util.Stack;
 
 public class Solution {

@@ -484,33 +484,7 @@ public E remove(int index) {
 |   `pop()`   | 均摊 $\mathrm{O}(1)$ |
 |  `peek()`   |   $\mathrm{O}(1)$    |
 
-#### 栈的应用
-
-https://leetcode.cn/problems/valid-parentheses/
-
-```java
-class Solution {
-    public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (c == '(' || c == '[' || c == '{')
-                stack.push(c);
-            else {
-                if (stack.isEmpty()) return false;
-                else {
-                    char top = stack.pop();
-                    if ((c == ')' && top != '(') ||
-                        (c == ']' && top != '[') ||
-                        (c == '}' && top != '{'))
-                        return false;
-                }
-            }
-        }
-        return stack.isEmpty();
-    }
-}
-```
+[Leetcode 20. Valid Parentheses](https://leetcode.cn/problems/valid-parentheses/)
 
 ### 队列
 
@@ -584,8 +558,6 @@ for (int i = front; i != tail; i = (i + 1) % data.length) {
 |  `dequeue()`   | 均摊 $\mathrm{O}(1)$ |
 |  `getFront()`  |   $\mathrm{O}(1)$    |
 
-#### 两种实现方式对比
-
 ```java
 private static int opCount = 100000;
 ```
@@ -593,8 +565,9 @@ private static int opCount = 100000;
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_5_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
-
-主要影响在于出队操作！
+>
+> 主要影响在于出队操作！
+>
 
 #### 双端队列
 
@@ -734,12 +707,9 @@ private static int opCount = 100000;
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/06_9_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
-
 ### 链表与递归
 
-#### 链表实践
-
-https://leetcode.cn/problems/remove-linked-list-elements/
+[203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements)
 
 常规解法（分开讨论）：
 
@@ -777,7 +747,7 @@ public ListNode removeElements(ListNode head, int val) {
 }
 ```
 
-#### 递归基础
+#### 理论
 
  $\operatorname{Sum}(\operatorname{arr}[0 \ldots n-1])=\operatorname{arr}[0]+\operatorname{Sum}(\operatorname{arr}[1 \ldots n-1])$
 
@@ -797,7 +767,7 @@ private static int sum(int[] arr, int l) {
 }
 ```
 
-##### 举例：arr= [6,10]
+**举例：arr= [6,10]**
 
 $\operatorname{arr}=[6,10]$
 
@@ -810,9 +780,7 @@ $\operatorname{arr}=[6,10]$
 - return arr[1] + sum(arr,2) = 10 + 0 = 10 (sum(arr,1))
 - return arr[0] + sum(arr,0) = 6 + 10 = 16 (sum(arr,0))
 
-#### 链表&递归
-
-递归解决[上述问题](#链表实践)
+**链表&递归**
 
 ![Recursive-Process-For-Removing-Elements](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_3_1.png)
 
@@ -824,7 +792,7 @@ public ListNode removeElements(ListNode head, int val) {
 }
 ```
 
-##### 举例：6 -> 7 -> 8 -> null
+**举例：6 -> 7 -> 8 -> null**
 
 $6 \rightarrow7 \rightarrow8 \rightarrow null$
 
@@ -848,7 +816,7 @@ $6 \rightarrow7 \rightarrow8 \rightarrow null$
 
 ![Linked-List-Recursion-Diagram](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_3_2.png)
 
-##### tip：递归深度
+**递归深度**
 
 ```java
 public ListNode removeElements(ListNode head, int val, int depth) {
@@ -879,8 +847,7 @@ public ListNode removeElements(ListNode head, int val, int depth) {
 <div align=left>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_4_1.png" title="Recursive-Debugging" height="50%" width="50%">
 </div>
-
-##### 使用递归实现链表的操作
+**使用递归实现链表的操作**
 
 - *add*
 
@@ -936,12 +903,9 @@ class Node{
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png" title="Array-Linked-List" height="50%" width="50%">
 </div>
+[Leetcode 206. Reverse Linked List](https://leetcode.cn/problems/reverse-linked-list/)
 
-### 链表相关习题
-
-https://leetcode.cn/problems/reverse-linked-list/
-
-#### 非递归
+- **非递归**
 
 ```java
 public ListNode reverseList(ListNode head) {
@@ -967,8 +931,7 @@ public ListNode reverseList(ListNode head) {
     <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_5.png" title="Linked-List-Flip-Non-Recursive-3-456-3" height="50%" width="50%">
     <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_6_6.png" title="Linked-List-Flip-Non-Recursive-3-456-4" height="50%" width="50%">
 </div>
-
-#### 递归
+- **递归**
 
 ```java
 public ListNode reverseList(ListNode head) {

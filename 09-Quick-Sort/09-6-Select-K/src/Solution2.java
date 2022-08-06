@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Solution2 {
-    public int[] getLeastNumbers(int[] nums, int k) {
+    public int[] smallestK(int[] nums, int k) {
+        if (k == 0) return new int[0];
         Random rnd = new Random();
         selectK(nums, 0, nums.length - 1, k - 1, rnd);
         return Arrays.copyOf(nums, k);
