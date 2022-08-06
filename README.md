@@ -1210,6 +1210,10 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
 
 ### 三路快排
 
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_4_1.png" title="Three-Way- Quicksort" height="50%" width="50%">
+</div>
+
 ## 二分查找
 
 ## 二分搜索树
