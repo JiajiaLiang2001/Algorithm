@@ -57,14 +57,15 @@
   - [归并排序](#归并排序)
     - [自顶向下](#自顶向下)
       - [图解](#图解)
-      - [打印跟踪](#打印跟踪)
       - [时间复杂度大小比较](#时间复杂度大小比较-1)
-      - [优化（增加判断）](#优化增加判断)
-      - [优化二（插入排序）](#优化二插入排序)
-      - [优化三（临时空间）](#优化三临时空间)
+      - [优化](#优化)
     - [自底向上](#自底向上)
-      - [优化（插入排序）](#优化插入排序)
+      - [优化](#优化-1)
+    - [逆序对](#逆序对)
   - [快速排序](#快速排序)
+    - [二路快排](#二路快排)
+    - [三路快排](#三路快排)
+    - [快速排序应用](#快速排序应用)
   - [二分查找](#二分查找)
   - [二分搜索树](#二分搜索树)
 - [Star History](#star-history)
@@ -1020,7 +1021,7 @@ MergerSort(arr,l,r){
 
 ![MergeSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_1_1.png)
 
-#### 打印跟踪
+打印跟踪
 
 <div align=left>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_2_1.png" title="MergeSort-Track" height="50%" width="50%">
@@ -1033,7 +1034,9 @@ MergerSort(arr,l,r){
 </div>
 
 
-#### 优化一（增加判断）
+#### 优化
+
+- 优化一（增加判断）
 
 ```java
 if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
@@ -1052,7 +1055,7 @@ if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_4_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_4_4.png) |
 
-#### 优化二（插入排序）
+- 优化二（插入排序）
 
 在优化一的基础上测试
 
@@ -1073,7 +1076,7 @@ if (arr[mid].compareTo(arr[mid + 1]) > 0)// arr[mid] < arr[mid + 1],
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![MergeSort1](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_3.png) | ![MergeSort2](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_5_4.png) |
 
-#### 优化三（临时空间）
+- 优化三（临时空间）
 
 在优化一、二的基础上测试
 
@@ -1151,7 +1154,7 @@ public static <E extends Comparable<E>> void sortBU(E[] arr) {
 </div>
 
 
-#### 优化（插入排序）
+#### 优化
 
 ```java
 public static <E extends Comparable<E>> void sortBU2(E[] arr) {
@@ -1180,11 +1183,17 @@ https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 
 ## 快速排序
 
+- **09-Quick-Sort**
+  - `09-1-QuickSort`
+  - `09-2-QuickSort-Optimized-by-Random`
+  - `09-3-QuickSort-2-Ways`
+  - `09-4-QuickSort-3-Ways`
+  - `09-5-Sort-Colors`
+  - `09-6-Select-K`
+
 ![QuickSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_1_1.png)
 
 ![Partition](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_1_2.png)
-
-### 相关问题
 
 对于有序数组：
 
@@ -1200,8 +1209,6 @@ https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 
 $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \frac{1}{1}=\frac{1}{n !}$，概率很低。
 
-#### 优化（随机&临时空间）
-
 ### 二路快排
 
 <div align=center>
@@ -1213,6 +1220,16 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_4_1.png" title="Three-Way- Quicksort" height="50%" width="50%">
 </div>
+
+### 快速排序应用
+
+[Leetcode 75. Sort Colors](https://leetcode.cn/problems/sort-colors/)
+
+[Leetcode 剑指 Offer 40. 最小的k个数](https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/submissions/)
+
+[Leetcode 215. Kth Largest Element in an Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
+
+[面试题 17.14. 最小K个数](https://leetcode.cn/problems/smallest-k-lcci/)
 
 ## 二分查找
 
