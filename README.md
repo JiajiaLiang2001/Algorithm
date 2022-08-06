@@ -1190,6 +1190,18 @@ https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 
 ![QuickSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_2_1.png)
 
+时间复杂度： $\mathrm{O}\left(n^{2}\right)$
+
+递归深度： $O(n)$
+
+------
+
+随机选择（选中最小值）：
+
+$\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \frac{1}{1}=\frac{1}{n !}$，概率很低。
+
+#### 优化（随机&临时空间）
+
 ## 二分查找
 
 ## 二分搜索树
