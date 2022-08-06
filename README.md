@@ -1180,7 +1180,9 @@ https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 
 ## 快速排序
 
+![QuickSort](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_1_1.png)
 
+![Partition](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_1_2.png)
 
 ## 二分查找
 
