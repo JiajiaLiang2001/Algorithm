@@ -1202,6 +1202,14 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
 
 #### 优化（随机&临时空间）
 
+### 二路快排
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/09_3_1.png" title="Two-Way- Quicksort" height="50%" width="50%">
+</div>
+
+### 三路快排
+
 ## 二分查找
 
 ## 二分搜索树
