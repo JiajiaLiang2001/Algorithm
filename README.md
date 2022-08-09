@@ -378,15 +378,17 @@ $\mathrm{O}\left(n^{2}\right)$
 
 ### 泛型数组
 
-<div align=left>
+<div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_5_1.png" title="Generic-Array" height="50%" width="50%">
 </div>
 
+
 ### 动态数组
 
-<div align=left>
+<div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/04_6_1.png" title="Dynamic-Array" height="50%" width="50%">
 </div>
+
 
 ### 时间复杂度
 
@@ -709,7 +711,11 @@ private static int opCount = 100000;
 </div>
 ### 链表与递归
 
+
+
 [203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements)
+
+
 
 常规解法（分开讨论）：
 
@@ -844,9 +850,14 @@ public ListNode removeElements(ListNode head, int val, int depth) {
 }
 ```
 
-<div align=left>
+
+
+<div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/07_4_1.png" title="Recursive-Debugging" height="50%" width="50%">
 </div>
+
+
+
 **使用递归实现链表的操作**
 
 - *add*
@@ -903,7 +914,11 @@ class Node{
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png" title="Array-Linked-List" height="50%" width="50%">
 </div>
+
+
 [Leetcode 206. Reverse Linked List](https://leetcode.cn/problems/reverse-linked-list/)
+
+
 
 - **非递归**
 
@@ -986,11 +1001,17 @@ MergerSort(arr,l,r){
 
 打印跟踪
 
-<div align=left>
+
+
+<div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_2_1.png" title="MergeSort-Track" height="50%" width="50%">
 </div>
 
+
+
 #### 时间复杂度大小比较
+
+
 
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/08_3_1.png" title="Test-Performance" height="50%" width="50%">
