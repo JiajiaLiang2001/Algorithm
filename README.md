@@ -1209,6 +1209,8 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
 
 [Leetcode 75. Sort Colors](https://leetcode.cn/problems/sort-colors/)
 
+
+
 [Leetcode 剑指 Offer 40. 最小的k个数](https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/submissions/)
 
 [Leetcode 215. Kth Largest Element in an Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
@@ -1216,6 +1218,11 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
 [面试题 17.14. 最小K个数](https://leetcode.cn/problems/smallest-k-lcci/)
 
 ## 二分查找
+
+- **10-Binary-Search**
+  - `10-1-Recursive-Binary-Search`
+  - `10-2-Binary-Search`
+  - `10-3-Select-K-Non-Recursive`
 
 ## 二分搜索树
 
