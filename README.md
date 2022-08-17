@@ -27,13 +27,11 @@
   - [栈和队列](#栈和队列)
     - [栈](#栈)
       - [复杂度分析](#复杂度分析)
-      - [栈的应用](#栈的应用)
     - [队列](#队列)
       - [数组队列](#数组队列)
         - [复杂度分析](#复杂度分析-1)
       - [循环队列](#循环队列)
         - [复杂度分析](#复杂度分析-2)
-      - [两种实现方式对比](#两种实现方式对比)
       - [双端队列](#双端队列)
   - [链表](#链表)
       - [复杂度分析](#复杂度分析-3)
@@ -42,18 +40,9 @@
     - [基于链表实现队列](#基于链表实现队列)
       - [链表队列和数组队列（单向和循环）对比](#链表队列和数组队列单向和循环对比)
     - [链表与递归](#链表与递归)
-      - [链表实践](#链表实践)
-      - [递归基础](#递归基础)
-        - [举例：arr= [6,10]](#举例arr-610)
-      - [链表&递归](#链表递归)
-        - [举例：6 -> 7 -> 8 -> null](#举例6---7---8---null)
-        - [tip：递归深度](#tip递归深度)
-        - [使用递归实现链表的操作](#使用递归实现链表的操作)
+      - [理论](#理论)
     - [关于链表的更多](#关于链表的更多)
-    - [链表相关习题](#链表相关习题)
-      - [非递归](#非递归)
-      - [递归](#递归)
-- [递归](#递归-1)
+- [递归](#递归)
   - [归并排序](#归并排序)
     - [自顶向下](#自顶向下)
       - [图解](#图解)
@@ -67,6 +56,10 @@
     - [三路快排](#三路快排)
     - [快速排序应用](#快速排序应用)
   - [二分查找](#二分查找)
+    - [非递归实现](#非递归实现)
+    - [递归实现](#递归实现)
+    - [前闭后开](#前闭后开)
+      - [归并排序](#归并排序-1)
   - [二分搜索树](#二分搜索树)
 - [Star History](#star-history)
 
@@ -1223,6 +1216,79 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
   - `10-1-Recursive-Binary-Search`
   - `10-2-Binary-Search`
   - `10-3-Select-K-Non-Recursive`
+
+### 非递归实现
+
+```java
+public static <E extends Comparable<E>> int search(E[] data, E target) {
+    int l = 0, r = data.length - 1;
+    while(l <= r){
+        int mid = l + (r - l) / 2;
+        if(data[mid].compareTo(target) == 0)
+            return mid;
+        if(data[mid].compareTo(target) < 0)
+            l = mid + 1;
+        else
+            r = mid - 1;
+    }
+    return -1;
+}
+```
+
+### 递归实现
+
+```java
+public static <E extends Comparable<E>> int searchR(E[] data, E target) {
+    return searchR(data, 0, data.length - 1, target);
+}
+private static <E extends Comparable<E>> int searchR(E[] data, int l, int r, E target) {
+    if (l > r) return -1;
+    int mid = l + (r - l) / 2;
+    if (data[mid].compareTo(target) == 0)
+        return mid;
+    if (data[mid].compareTo(target) < 0)
+        return searchR(data, mid + 1, r, target);
+    return searchR(data, l, mid - 1, target);
+}
+```
+
+### 前闭后开
+
+包括递归与非递归
+
+```java
+public static <E extends Comparable<E>> int search(E[] data, E target) {
+    int l = 0, r = data.length;
+    while (l < r) {
+        int mid = l + (r - l) / 2;
+        if (data[mid].compareTo(target) == 0)
+            return mid;
+        if (data[mid].compareTo(target) < 0)
+            l = mid + 1;// [mid + 1 , r)
+        else
+            r = mid;// [l , mid)
+    }
+    return -1;
+}
+public static <E extends Comparable<E>> int searchR(E[] data, E target) {
+    return searchR(data, 0, data.length, target);
+}
+private static <E extends Comparable<E>> int searchR(E[] data, int l, int r, E target) {
+    if (l >= r) return -1;
+    int mid = l + (r - l) / 2;
+    if (data[mid].compareTo(target) == 0)
+        return mid;
+    if (data[mid].compareTo(target) < 0)
+        return searchR(data, mid + 1, r, target);// [mid + 1 , r)
+    return searchR(data, l, mid, target);// [l , mid)
+}
+```
+
+#### 归并排序
+
+$[l, \mathrm{mid})$
+
+$[mid, \mathrm{r})$
 
 ## 二分搜索树
 
