@@ -3,28 +3,29 @@
 
 import java.util.Random;
 
-public class Solution1 {
+/**
+ * recursive version
+ * selectK : [l,r)
+ * partition : [l,r)
+ */
+public class Solution2 {
     public int findKthLargest(int[] nums, int k) {
         Random rnd = new Random();
-        return selectK(nums, 0, rnd);
+        return selectK(nums, 0, nums.length, nums.length - k, rnd);
     }
 
-    private int selectK(int[] nums, int k, Random rnd) {
-        int l = 0, r = nums.length - 1;
-        while (l <= r) {
-            int p = partition(nums, l, r, rnd);
-            if (k == p) return nums[p];
-            if (k < p) r = p - 1;
-            else l = p + 1;
-        }
-        throw new RuntimeException("No Solution");
+    private int selectK(int[] nums, int l, int r, int k, Random rnd) {
+        int p = partition(nums, l, r, rnd);
+        if (k == p) return nums[p];
+        if (k < p) return selectK(nums, l, p, k, rnd);
+        return selectK(nums, p + 1, r, k, rnd);
     }
 
     private int partition(int[] nums, int l, int r, Random rnd) {
-        int p = l + rnd.nextInt(r - l + 1);
+        int p = l + rnd.nextInt(r - l);
         swap(nums, l, p);
-        // arr[l+1...i-1] <= v; arr[j+1...r] >= v
-        int i = l + 1, j = r;
+        // nums[l+1...i-1] <= v; nums[j+1...r) >= v
+        int i = l + 1, j = r - 1;
         while (true) {
             while (i <= j && nums[i] < nums[l])
                 i++;

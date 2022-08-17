@@ -1,15 +1,12 @@
-/// Leetcode 剑指 Offer 40. 最小的k个数
-/// https://leetcode.cn/problems/kth-largest-element-in-an-array/
+/// Leetcode 215. Kth Largest Element in an Array
+/// https://leetcode-cn.com/problems/kth-largest-element-in-an-array/
 
-import java.util.Arrays;
 import java.util.Random;
 
-class Solution {
-    public int[] getLeastNumbers(int[] nums, int k) {
-        if (k == 0) return new int[0];
+public class Solution {
+    public int findKthLargest(int[] nums, int k) {
         Random rnd = new Random();
-        selectK(nums, 0, rnd);
-        return Arrays.copyOf(nums, k);
+        return selectK(nums, nums.length - k, rnd);
     }
 
     private int selectK(int[] nums, int k, Random rnd) {

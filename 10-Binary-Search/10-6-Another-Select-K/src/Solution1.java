@@ -1,28 +1,30 @@
-/// Leetcode 剑指 Offer 40. 最小的k个数
-/// https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/
+/// Leetcode 215. Kth Largest Element in an Array
+/// https://leetcode-cn.com/problems/kth-largest-element-in-an-array/
 
-import java.util.Arrays;
 import java.util.Random;
 
-public class Solution {
-    public int[] getLeastNumbers(int[] nums, int k) {
-        if (k == 0) return new int[0];
+/**
+ * recursive version
+ * selectK : [l,r)
+ * partition : [l,r]
+ */
+public class Solution1 {
+    public int findKthLargest(int[] nums, int k) {
         Random rnd = new Random();
-        selectK(nums, 0, nums.length - 1, k - 1, rnd);
-        return Arrays.copyOf(nums, k);
+        return selectK(nums, 0, nums.length, nums.length - k, rnd);
     }
 
     private int selectK(int[] nums, int l, int r, int k, Random rnd) {
-        int p = partition(nums, l, r, rnd);
+        int p = partition(nums, l, r - 1, rnd);
         if (k == p) return nums[p];
-        if (k < p) return selectK(nums, l, p - 1, k, rnd);
+        if (k < p) return selectK(nums, l, p, k, rnd);
         return selectK(nums, p + 1, r, k, rnd);
     }
 
     private int partition(int[] nums, int l, int r, Random rnd) {
         int p = l + rnd.nextInt(r - l + 1);
         swap(nums, l, p);
-        // arr[l+1...i-1] <= v; arr[j+1...r] >= v
+        // nums[l+1...i-1] <= v; nums[j+1...r] >= v
         int i = l + 1, j = r;
         while (true) {
             while (i <= j && nums[i] < nums[l])

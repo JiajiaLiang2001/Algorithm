@@ -1,33 +1,33 @@
-/// 面试题 17.14. 最小K个数
-/// https://leetcode.cn/problems/smallest-k-lcci/
+/// Leetcode 215. Kth Largest Element in an Array
+/// https://leetcode-cn.com/problems/kth-largest-element-in-an-array/
 
-import java.util.Arrays;
 import java.util.Random;
 
-public class Solution2 {
-    public int[] smallestK(int[] nums, int k) {
-        if (k == 0) return new int[0];
+/**
+ * Non-recursive version: Dichotomy
+ */
+public class Solution0 {
+    public int findKthLargest(int[] nums, int k) {
         Random rnd = new Random();
-        selectK(nums, 0, rnd);
-        return Arrays.copyOf(nums, k);
+        return selectK(nums, nums.length - k, rnd);
     }
 
     private int selectK(int[] nums, int k, Random rnd) {
-        int l = 0, r = nums.length - 1;
-        while (l <= r) {
+        int l = 0, r = nums.length;
+        while (l < r) {
             int p = partition(nums, l, r, rnd);
             if (k == p) return nums[p];
-            if (k < p) r = p - 1;
+            if (k < p) r = p;
             else l = p + 1;
         }
         throw new RuntimeException("No Solution");
     }
 
     private int partition(int[] nums, int l, int r, Random rnd) {
-        int p = l + rnd.nextInt(r - l + 1);
+        int p = l + rnd.nextInt(r - l);
         swap(nums, l, p);
-        // arr[l+1...i-1] <= v; arr[j+1...r] >= v
-        int i = l + 1, j = r;
+        // arr[l+1...i-1] <= v; arr[j+1...r) >= v
+        int i = l + 1, j = r - 1;
         while (true) {
             while (i <= j && nums[i] < nums[l])
                 i++;
