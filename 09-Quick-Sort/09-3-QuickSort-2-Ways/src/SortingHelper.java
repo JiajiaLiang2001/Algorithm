@@ -19,7 +19,7 @@ public class SortingHelper {
             InsertionSort.sort(arr);
         else if (sortName.equals("MergeSortBU"))
             MergeSort.sortBU(arr);
-        else if (sortName.equals("MergeSortBU"))
+        else if (sortName.equals("MergeSortUB"))
             MergeSort.sortUB(arr);
         else if (sortName.equals("QuickSort"))
             QuickSort.sort(arr);
