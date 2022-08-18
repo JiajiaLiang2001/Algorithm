@@ -704,11 +704,11 @@ private static int opCount = 100000;
 </div>
 ### 链表与递归
 
+------
 
+### 相关题目
 
 [203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements)
-
-
 
 常规解法（分开讨论）：
 
@@ -907,11 +907,11 @@ class Node{
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png" title="Array-Linked-List" height="50%" width="50%">
 </div>
+------
 
+### 相关问题
 
 [Leetcode 206. Reverse Linked List](https://leetcode.cn/problems/reverse-linked-list/)
-
-
 
 - **非递归**
 
@@ -1241,6 +1241,7 @@ public static <E extends Comparable<E>> int search(E[] data, E target) {
 public static <E extends Comparable<E>> int searchR(E[] data, E target) {
     return searchR(data, 0, data.length - 1, target);
 }
+
 private static <E extends Comparable<E>> int searchR(E[] data, int l, int r, E target) {
     if (l > r) return -1;
     int mid = l + (r - l) / 2;
@@ -1270,9 +1271,11 @@ public static <E extends Comparable<E>> int search(E[] data, E target) {
     }
     return -1;
 }
+
 public static <E extends Comparable<E>> int searchR(E[] data, E target) {
     return searchR(data, 0, data.length, target);
 }
+
 private static <E extends Comparable<E>> int searchR(E[] data, int l, int r, E target) {
     if (l >= r) return -1;
     int mid = l + (r - l) / 2;
@@ -1291,6 +1294,14 @@ private static <E extends Comparable<E>> int searchR(E[] data, int l, int r, E t
 $[l, \mathrm{mid})$
 
 $[mid, \mathrm{r})$
+
+### 二分查找法的变种
+
+查找大于 $target$ 的最小值
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_8_1.png" title="Upper" height="50%" width="50%">
+</div>
 
 ## 二分搜索树
 
