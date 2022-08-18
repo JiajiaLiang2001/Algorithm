@@ -1286,11 +1286,11 @@ private static <E extends Comparable<E>> int searchR(E[] data, int l, int r, E t
 
 #### 归并排序
 
+修改区间
+
 $[l, \mathrm{mid})$
 
 $[mid, \mathrm{r})$
-
-
 
 ## 二分搜索树
 
