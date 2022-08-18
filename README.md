@@ -1300,7 +1300,7 @@ $[mid, \mathrm{r})$
 $upper$：查找大于 $target$ 的最小索引
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_8_1.png" title="Upper" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_8_1.png" title="Upper">
 </div>
 
 $upper-ceil$：
@@ -1326,7 +1326,7 @@ $1 1 3 3 5 5 7 7$
 $lower$：查找小于 $target$ 的最大索引
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_11_1.png" title="Lower" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_11_1.png" title="Lower">
 </div>
 
 $lower-floor$：
