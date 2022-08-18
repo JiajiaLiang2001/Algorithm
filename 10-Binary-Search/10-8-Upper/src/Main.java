@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Integer[] nums = {23,56, 65, 69, 72, 89, 96, 99};
-        int index = BinarySearch.upper(nums,60);// 2
-        System.out.println(index);
+        Integer[] nums = {1, 1, 3, 3, 5, 5, 7, 7};
+        System.out.println(BinarySearch.upper(nums, 5));// 6
+        System.out.println(BinarySearch.upper(nums, 6));// 6
     }
 }

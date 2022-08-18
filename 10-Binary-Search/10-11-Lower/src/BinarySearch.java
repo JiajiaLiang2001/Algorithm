@@ -30,10 +30,18 @@ public class BinarySearch {
         return searchR(data, l, mid - 1, target);
     }
 
+    /**
+     * > target, returns the minimum index
+     *
+     * @param data
+     * @param target
+     * @param <E>
+     * @return
+     */
     public static <E extends Comparable<E>> int upper(E[] data, E target) {
         int l = 0, r = data.length;
         while (l < r) {
-            int mid = l + (r - l) / 2;// Round down
+            int mid = l + (r - l) / 2;
             if (data[mid].compareTo(target) <= 0)
                 l = mid + 1;
             else
@@ -42,13 +50,31 @@ public class BinarySearch {
         return l;
     }
 
+    /**
+     * = target, returns the maximum index
+     * > target, returns the minimum index(upper)
+     *
+     * @param data
+     * @param target
+     * @param <E>
+     * @return
+     */
     public static <E extends Comparable<E>> int upper_ceil(E[] data, E target) {
         int u = upper(data, target);
-        if (u - 1 <= 0 && data[u - 1].compareTo(target) == 0)
+        if (u - 1 >= 0 && data[u - 1].compareTo(target) == 0)
             return u - 1;
         else return u;
     }
 
+    /**
+     * = target, returns the minimum index
+     * > target, returns the minimum index(upper)
+     *
+     * @param data
+     * @param target
+     * @param <E>
+     * @return
+     */
     public static <E extends Comparable<E>> int lower_ceil(E[] data, E target) {
         int l = 0, r = data.length;
         while (l < r) {
@@ -61,6 +87,14 @@ public class BinarySearch {
         return l;
     }
 
+    /**
+     * < target, returns the maximum index
+     *
+     * @param data
+     * @param target
+     * @param <E>
+     * @return
+     */
     public static <E extends Comparable<E>> int lower(E[] data, E target) {
         int l = -1, r = data.length - 1;
         while (l < r) {

@@ -1297,11 +1297,55 @@ $[mid, \mathrm{r})$
 
 ### 二分查找法的变种
 
-查找大于 $target$ 的最小值
+$upper$：查找大于 $target$ 的最小索引
 
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_8_1.png" title="Upper" height="50%" width="50%">
 </div>
+
+$upper-ceil$：
+
+- 数组中存在 $target$ ，返回最大索引
+- 数组中不存在 $target$ ，返回 $upper$
+
+$lower-ceil$：查找大于等于 $target$ 的最小值
+
+- 数组中存在 $target$ ，返回最小索引
+- 数组中不存在 $target$ ，返回 $upper$
+
+$1 1 3 3 5 5 7 7$
+
+|    指标量    |        存在（5）         |       不存在（6）        |
+| :----------: | :----------------------: | :----------------------: |
+|   $upper$    | 1 1 3 3 5 5 **7** 7（6） | 1 1 3 3 5 5 **7** 7（6） |
+| $upper-ceil$ | 1 1 3 3 5 **5** 7 7（5） | 1 1 3 3 5 5 **7** 7（6） |
+| $lower-ceil$ | 1 1 3 3 **5** 5 7 7（4） | 1 1 3 3 5 5 **7** 7（6） |
+
+------
+
+$lower$：查找小于 $target$ 的最大索引
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_11_1.png" title="Lower" height="50%" width="50%">
+</div>
+
+$lower-floor$：
+
+- 数组中存在 $target$ ，返回最小索引
+- 数组中不存在 $target$ ，返回 $lower$
+
+$upper-floor$：
+
+- 数组中存在 $target$ ，返回最大索引
+- 数组中不存在 $target$ ，返回 $lower$
+
+$1 1 3 3 5 5 7 7$
+
+|    指标量     |        存在（5）         |       不存在（6）        |
+| :-----------: | :----------------------: | :----------------------: |
+|    $lower$    | 1 1 3 **3** 5 5 7 7（3） | 1 1 3 3 5 **5** 7 7（5） |
+| $lower-floor$ | 1 1 3 3 **5** 5 7 7（4） | 1 1 3 3 5 **5** 7 7（5） |
+| $upper-floor$ | 1 1 3 3 5 **5** 7 7（5） | 1 1 3 3 5 **5** 7 7（5） |
 
 ## 二分搜索树
 

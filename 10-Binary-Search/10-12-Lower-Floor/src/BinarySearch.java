@@ -86,4 +86,40 @@ public class BinarySearch {
         }
         return l;
     }
+
+    /**
+     * < target, returns the maximum index
+     *
+     * @param data
+     * @param target
+     * @param <E>
+     * @return
+     */
+    public static <E extends Comparable<E>> int lower(E[] data, E target) {
+        int l = -1, r = data.length - 1;
+        while (l < r) {
+            int mid = l + (r - l + 1) / 2;// Rounded up!
+            if (data[mid].compareTo(target) < 0)
+                l = mid;
+            else
+                r = mid - 1;
+        }
+        return l;
+    }
+
+    /**
+     * = target, returns the minimum index
+     * < target, returns the maximum index(lower)
+     *
+     * @param data
+     * @param target
+     * @param <E>
+     * @return
+     */
+    public static <E extends Comparable<E>> int lower_floor(E[] data, E target) {
+        int l = lower(data, target);
+        if (l + 1 <= data.length - 1 && data[l + 1].compareTo(target) == 0)
+            return l + 1;
+        else return l;
+    }
 }
