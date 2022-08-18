@@ -1290,6 +1290,8 @@ $[l, \mathrm{mid})$
 
 $[mid, \mathrm{r})$
 
+
+
 ## 二分搜索树
 
 # Star History
