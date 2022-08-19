@@ -1445,8 +1445,6 @@ private int costDays(int[] weights, int k) {
 
 - 每一颗子树也是二分搜索树。
 
-
-
 # Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
