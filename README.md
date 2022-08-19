@@ -1445,6 +1445,50 @@ private int costDays(int[] weights, int k) {
 
 - 每一颗子树也是二分搜索树。
 
+------
+
+- 增加元素（递归算法）
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_3_1" title="Add-Elements" height="50%" width="50%">
+</div>
+
+非递归
+
+```java
+public void add(E e) {
+    if (root == null) {
+        root = new Node(e);
+        size++;
+        return;
+    }
+    Node p = root;
+    while (p != null) {
+        if (e.compareTo(p.e) < 0) {
+            if (p.left == null) {
+                p.left = new Node(e);
+                size++;
+                return;
+            }
+            p = p.left;
+        } else if (e.compareTo(p.e) > 0) {
+            if (p.right == null) {
+                p.right = new Node(e);
+                size++;
+                return;
+            }
+            p = p.right;
+        } else return;
+    }
+}
+```
+
+- 查找元素（递归算法）
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_4_1" title="Contains-Element" height="50%" width="50%">
+</div>
+
 # Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
