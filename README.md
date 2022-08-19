@@ -1,4 +1,4 @@
-#  	数据结构与算法
+数据结构与算法
 
 - [数据结构与算法](#数据结构与算法)
 - [基础了解](#基础了解)
@@ -1162,7 +1162,7 @@ public static <E extends Comparable<E>> void sortBU2(E[] arr) {
 
 ### 逆序对
 
-https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
+[剑指 Offer 51. 数组中的逆序对](https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
 
 ## 快速排序
 
@@ -1222,6 +1222,7 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
   - `10-1-Recursive-Binary-Search`
   - `10-2-Binary-Search`
   - `10-3-Select-K-Non-Recursive`
+  - 
 
 ### 非递归实现
 
@@ -1365,7 +1366,7 @@ $1 1 3 3 5 5 7 7$
 | 指标量        | 1 1 3 **3** 5 5 7 7（5）                                     |
 | ------------- | ------------------------------------------------------------ |
 | $lower-floor$ | ![Lower-Floor](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_12_1.png) |
-| $upper-floor$ | ![Upper-Floor](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_13_1.png) |
+| $upper-floor$ | ![Lower-Floor](https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/10_13_1.png) |
 
 ### 二分查找模板
 
@@ -1374,9 +1375,45 @@ $1 1 3 3 5 5 7 7$
 </div>
 ------
 
+- 校正 $l$ ，上取整 $mid = l + (r - l) / 2;$
+
+- 校正 $r$ ，上取整 $mid = l + (r - l + 1) / 2;$
+
 ### 相关问题
 
+[875. Koko Eating Bananas](https://leetcode.cn/problems/koko-eating-bananas/)
 
+[1011. Capacity To Ship Packages Within D Days](https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/)
+
+部分解释：
+
+```java
+private int costDays(int[] weights, int k) {
+    int cur = 0, res = 0;// 0
+    for (int weight : weights)
+        if (cur + weight <= k) cur += weight;// 1
+        else {// 2
+            res++;
+            cur = weight;
+        }
+    res++;// 3
+    return res;
+}
+```
+
+| 步骤 | weight | cur  | res  |
+| :--: | :----: | :--: | :--: |
+|  0   |        |  0   |  0   |
+|  1   |   1    |  1   |  0   |
+|  1   |   2    |  3   |  0   |
+|  1   |   3    |  6   |  0   |
+|  1   |   4    |  10  |  0   |
+|  1   |   5    |  15  |  0   |
+|  2   |   6    |  6   |  1   |
+|  1   |   7    |  13  |  1   |
+|  2   |   8    |  8   |  2   |
+|  3   |   9    |  9   |  3   |
+|      |        |      |  4   |
 
 ## 二分搜索树
 
