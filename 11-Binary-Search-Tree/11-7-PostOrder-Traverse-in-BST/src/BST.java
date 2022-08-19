@@ -78,7 +78,7 @@ public class BST<E extends Comparable<E>> {
         if (node == null)
             return;
         inOrder(node.left);
-        System.out.println(node.e);
+        System.out.println(node);
         inOrder(node.right);
     }
 
@@ -89,10 +89,9 @@ public class BST<E extends Comparable<E>> {
     private void postOrder(Node node) {
         if (node == null)
             return;
-
         postOrder(node.left);
         postOrder(node.right);
-        System.out.println(node.e);
+        System.out.println(node);
     }
 
     @Override

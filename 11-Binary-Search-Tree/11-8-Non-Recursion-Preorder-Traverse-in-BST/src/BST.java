@@ -79,7 +79,7 @@ public class BST<E extends Comparable<E>> {
         stack.push(root);
         while (!stack.isEmpty()) {
             Node cur = stack.pop();
-            System.out.println(cur.e);
+            System.out.println(cur);
             if (cur.right != null)
                 stack.push(cur.right);
             if (cur.left != null)
@@ -95,7 +95,7 @@ public class BST<E extends Comparable<E>> {
         if (node == null)
             return;
         inOrder(node.left);
-        System.out.println(node.e);
+        System.out.println(node);
         inOrder(node.right);
     }
 
@@ -109,7 +109,7 @@ public class BST<E extends Comparable<E>> {
 
         postOrder(node.left);
         postOrder(node.right);
-        System.out.println(node.e);
+        System.out.println(node);
     }
 
     @Override
