@@ -1594,10 +1594,20 @@ public void add(E e) {
 ### 遍历
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/traversal.png" title="Traversal" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/traversal.png" title="Preorder-Traversal" height="50%" width="50%">
 </div>
 
+- 前序遍历
 
+  *5 3 2 4 6 8*
+
+- 中序遍历
+
+  *2 3 4 5 6 8*
+
+- 后序遍历
+
+  *2 4 3 8 6 5*
 
 # Star History
 
