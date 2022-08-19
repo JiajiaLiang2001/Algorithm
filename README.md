@@ -1417,6 +1417,36 @@ private int costDays(int[] weights, int k) {
 
 ## 二分搜索树
 
+### 二叉树
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/binary_tree.png" title="Binary-Tree.png" height="50%" width="50%">
+</div>
+
+相关术语：
+
+**根节点**
+
+**叶子节点**
+
+**左孩子/右孩子**
+
+> 树具有天然的递归结构（每个节点的左子树也是二叉树、每个节点的右子树也是二叉树）
+
+### 二分搜索树
+
+**二分搜索树**：二叉树的一种。
+
+- 二叉树；
+
+- 每一个节点的值；
+  - 大于其左子树的所有节点的值。
+  - 小于其右子树的所有节点的值。
+
+- 每一颗子树也是二分搜索树。
+
+
+
 # Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
