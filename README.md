@@ -465,6 +465,10 @@ public E remove(int index) {
 
 封装属于我们的栈：
 
+```java
+private Array<E> array;
+```
+
 - `ArrayStack()`
 
 - `ArrayStack(int capacity)`
@@ -492,6 +496,10 @@ public E remove(int index) {
 #### 数组队列
 
 封装属于我们的数组队列：
+
+```java
+private Array<E> array;
+```
 
 - `ArrayQueue(int capacity)`
 - `ArrayQueue()`
@@ -525,8 +533,13 @@ public E remove(int index) {
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/05_4_2.png" title="Full-Queue" height="50%" width="50%">
 </div>
-
 封装属于我们的循环队列：
+
+```java
+private E[] data;
+private int front, tail;
+private int size;
+```
 
 - `LoopQueue(int capacity)`
 - `LoopQueue()`
@@ -573,6 +586,12 @@ private static int opCount = 100000;
 #### 双端队列
 
 封装属于我们的双端队列：
+
+```java
+private E[] data;
+private int front, tail;
+private int size;
+```
 
 - `Deque(int capacity)`
 - `Deque()`
@@ -634,6 +653,11 @@ private class Node {
 }
 ```
 
+```java
+private Node head;// private Node dummyHead;
+private int size;
+```
+
 - `LinkedList()`
 - `int getSize()`
 - `boolean isEmpty()`
@@ -671,6 +695,10 @@ private class Node {
 
 使用[链表](#链表)封装属于我们的栈：
 
+```java
+private LinkedList<E> list;
+```
+
 - `LinkedListStack()`
 - `int getSize()`
 - `boolean isEmpty()`
@@ -691,6 +719,32 @@ private static int opCount = 100000;
 ### 基于链表实现队列
 
 使用[链表](#链表)封装属于我们的队列：
+
+```java
+private class Node {
+    public E e;
+    public Node next;
+    public Node(E e, Node next) {
+        this.e = e;
+        this.next = next;
+    }
+    public Node(E e) {
+        this(e, null);
+    }
+    public Node() {
+        this(null, null);
+    }
+    @Override
+    public String toString() {
+        return e.toString();
+    }
+}
+```
+
+```java
+private Node head, tail;
+private int size;
+```
 
 - `LinkedListQueue()`
 - `int getSize()`
@@ -1222,7 +1276,18 @@ $\frac{1}{n} \times \frac{1}{n-1} \times \frac{1}{n-2} \times \ldots \times \fra
   - `10-1-Recursive-Binary-Search`
   - `10-2-Binary-Search`
   - `10-3-Select-K-Non-Recursive`
-  - 
+  - `10-4-Another-Recursive-Binary-Search`
+  - `10-5-Another-Binary-Search`
+  - `10-6-Another-Select-K`
+  - `10-7-Another-MergeSort`
+  - `10-8-Upper`
+  - `10-9-Upper-Ceil`
+  - `10-10-Lower-Ceil`
+  - `10-11-Lower`
+  - `10-12-Lower-Floor`
+  - `10-13-Upper-Floor`
+  - `10-14-Koko-Eating-Bananas`
+  - `10-15-Capacity-To-Ship-Packages-Within-D-Days`
 
 ### 非递归实现
 
@@ -1417,6 +1482,12 @@ private int costDays(int[] weights, int k) {
 
 ## 二分搜索树
 
+- **11-Binary-Search-Tree**
+  - `11-1-Binary-Search-Tree`
+  - `11-2-Add-Elements`
+  - `11-3-Improved-Add-Elements`
+  - `11-4-Contains-Element`
+
 ### 二叉树
 
 <div align=center>
@@ -1447,10 +1518,41 @@ private int costDays(int[] weights, int k) {
 
 ------
 
+封装属于我们的二叉搜索树：
+
+```java
+private class Node {
+    public E e;
+    public Node left, right;
+    public Node(E e) {
+        this.e = e;
+        left = null;
+        right = null;
+    }
+    @Override
+    public String toString() {
+        return e.toString();
+    }
+}
+```
+
+```java
+private Node root;
+private int size;
+```
+
+- `BST()`
+- `boolean isEmpty()`
+- `void add(E e)`
+- `boolean contains(E e)`
+- `void preOrder(Node node)`
+
+------
+
 - 增加元素（递归算法）
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_3_1" title="Add-Elements" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_3_1.png" title="Add-Elements" height="50%" width="50%">
 </div>
 
 非递归
@@ -1486,8 +1588,16 @@ public void add(E e) {
 - 查找元素（递归算法）
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_4_1" title="Contains-Element" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_4_1.png" title="Contains-Element" height="50%" width="50%">
 </div>
+
+### 遍历
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/traversal.png" title="Traversal" height="50%" width="50%">
+</div>
+
+
 
 # Star History
 
