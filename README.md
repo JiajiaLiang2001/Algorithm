@@ -1600,8 +1600,9 @@ private int size;
 - 增加元素（递归算法）
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_3_1.png" title="Add-Elements" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_3_1.png" title="Add-Elements">
 </div>
+
 
 非递归
 
@@ -1636,8 +1637,9 @@ public void add(E e) {
 - 查找元素（递归算法）
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_4_1.png" title="Contains-Element" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_4_1.png" title="Contains-Element">
 </div>
+
 
 ### 遍历
 
