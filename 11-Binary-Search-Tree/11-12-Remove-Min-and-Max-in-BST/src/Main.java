@@ -12,7 +12,6 @@ public class Main {
         //  / \    \   //
         // 2  4     8  //
         /////////////////
-        System.out.println(bst);
 
         for (int num : nums)
             bst.add(num);
@@ -54,6 +53,7 @@ public class Main {
     }
 
     public static <E extends Comparable<E>> void traversePrint(ArrayList<E> nums) {
-        for (E num : nums) System.out.println(num);
+        for (E num : nums) System.out.print(num + " ");
+        System.out.println();
     }
 }
