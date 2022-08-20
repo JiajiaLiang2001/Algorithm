@@ -10,7 +10,6 @@ public class Student implements Comparable<Student> {
 
     @Override
     public boolean equals(Object o) {
-
         if (this == o) return true;
         if (o == null || this.getClass() != o.getClass()) return false;
         Student student = (Student) o;

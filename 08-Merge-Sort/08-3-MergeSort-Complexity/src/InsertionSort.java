@@ -3,7 +3,6 @@ public class InsertionSort {
     }
 
     public static <E extends Comparable<E>> void sort(E[] arr) {
-
         for (int i = 1; i < arr.length; i++) {// i = 0
             E t = arr[i];
             int j;

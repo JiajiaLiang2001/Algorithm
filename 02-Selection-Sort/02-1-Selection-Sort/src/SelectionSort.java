@@ -3,7 +3,6 @@ public class SelectionSort {
     }
 
     public static void sort(int[] arr) {
-
         for (int i = 0; i < arr.length - 1; i++) {//i < arr.length
             int minIndex = i;
             for (int j = i; j < arr.length; j++) {
@@ -15,7 +14,6 @@ public class SelectionSort {
     }
 
     private static void swap(int[] arr, int i, int j) {
-
         int t = arr[i];
         arr[i] = arr[j];
         arr[j] = t;

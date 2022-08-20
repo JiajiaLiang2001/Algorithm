@@ -3,7 +3,6 @@ public class SortingHelper {
     }
 
     public static <E extends Comparable<E>> boolean isSorted(E[] arr) {
-
         for (int i = 1; i < arr.length; i++)
             if (arr[i - 1].compareTo(arr[i]) > 0)
                 return false;
@@ -11,7 +10,6 @@ public class SortingHelper {
     }
 
     public static <E extends Comparable<E>> void sortTest(String sortName, E[] arr) {
-
         long startTime = System.nanoTime();
         if (sortName.equals("SelectionSort"))
             SelectionSort.sort(arr);
