@@ -1516,6 +1516,8 @@ private int costDays(int[] weights, int k) {
   - `11-11-Level-Traverse-in-BST`
   - `11-12-Remove-Min-and-Max`
   - `11-13-Remove-Elements`
+  - `11-14-Floor-and-Ceil-in-BST`
+  - `11-15-Rank-and-Select`
 
 ### 二叉树
 
@@ -1594,6 +1596,10 @@ private int size;
   - `Node removeMax(Node node)`
 - `void remove(E e)`
   - `Node remove(Node node, E e)`
+- `E floor(E e)`
+  - `Node floor(Node node, E e)` 
+- `E ceil(E e)`
+  - `ceil(Node node, E e)`
 
 ------
 
@@ -1665,6 +1671,15 @@ public void add(E e) {
 
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_13_1.png" title="Remove-Elements">
+</div>
+
+### 其他问题
+
+- $floor：< e，max$
+- $ceil：> e，min$
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_14_1.png" title="Floor-and-Ceil">
 </div>
 
 # Star History
