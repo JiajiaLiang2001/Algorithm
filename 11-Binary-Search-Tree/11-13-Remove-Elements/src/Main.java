@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         BST<Integer> bst = new BST<>();
-        int[] nums = {5, 3, 6, 8, 4, 2};
+        int[] nums = {28, 16, 30, 13, 29, 42};
 
         /////////////////
         //      5      //
@@ -12,14 +12,10 @@ public class Main {
         //  / \    \   //
         // 2  4     8  //
         /////////////////
-
-        for (int num : nums)
+        for (int num : nums) {
             bst.add(num);
-        testRemoveMin(bst);
-
-        for (int num : nums)
-            bst.add(num);
-        testRemoveMax(bst);
+        }
+        bst.remove(30);
     }
 
     public static <E extends Comparable<E>> void testRemoveMin(BST<E> bst) {

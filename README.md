@@ -1641,7 +1641,7 @@ public void add(E e) {
 </div>
 
 
-### 遍历
+### 二叉搜索树的遍历
 
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/traversal.png" title="Preorder-Traversal" height="50%" width="50%">
@@ -1663,7 +1663,9 @@ public void add(E e) {
 
 - 删除元素
 
-详细图解
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_13_1.png" title="Remove-Elements">
+</div>
 
 # Star History
 
