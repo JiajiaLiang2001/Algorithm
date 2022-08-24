@@ -1,5 +1,18 @@
 # 数据结构与算法
 
+注：公式无法显示问题：
+
+1. 网络问题
+
+2. 安装插件 MathJax Plugin for Github
+
+   https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related
+
+具体解决方法：
+
+- 网页浏览，参考：https://github.com/wgs666/MathJax_Plugin_for_Github
+- 离线浏览
+
 [![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
 
 - [基础了解](#基础了解)
