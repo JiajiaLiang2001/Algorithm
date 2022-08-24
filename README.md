@@ -1507,6 +1507,7 @@ private int costDays(int[] weights, int k) {
   - `11-15-Rank-and-Select`
   - `11-16-Set`
     - `11-16-1-BSTSet`
+    - `11-16-2-LinkedListSet`
 
 ### 二叉树
 
@@ -1697,6 +1698,14 @@ public void add(E e) {
 #### 集合
 
 基于二分搜索树封装属于我们的集合：
+
+- `void add(E e);`
+- `boolean contains(E e);`
+- `void remove(E e);`
+- `int getSize();`
+- `boolean isEmpty();`
+
+基于链表封装属于我们的集合：
 
 - `void add(E e);`
 - `boolean contains(E e);`
