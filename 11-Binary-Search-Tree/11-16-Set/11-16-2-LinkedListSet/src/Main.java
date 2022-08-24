@@ -7,7 +7,6 @@ public class Main {
         LinkedListSet<String> set1 = new LinkedListSet<>();
         if (FileOperation.readFile("11-Binary-Search-Tree/11-16-Set/11-16-1-BSTSet/src/text/pride-and-prejudice.txt", words1)) {
             System.out.println("Total words: " + words1.size());
-
             for (String word : words1)
                 set1.add(word);
             System.out.println("Total different words: " + set1.getSize());

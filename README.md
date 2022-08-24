@@ -225,7 +225,7 @@ for (int i = 0; i < arr.length - 1; i++) {//i < arr.length
 
 1 2 3 4 5 6
 
-#### 时间复杂度
+#### 时间复杂度分析
 
 $$
 \begin{aligned}
@@ -331,7 +331,7 @@ for (int i = 1; i < arr.length; i++) {// i = 0
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/03_2_1.png" title="Compare-Performance" height="50%" width="50%">
 </div>
 
-#### 时间复杂度
+#### 时间复杂度分析
 
 $\mathrm{O}\left(n^{2}\right)$
 
@@ -486,7 +486,7 @@ private Array<E> array;
 - `E pop()`
 - `E peek()`
 
-#### 复杂度分析
+##### 时间复杂度分析
 
 |    操作     |      时间复杂度      |
 | :---------: | :------------------: |
@@ -517,7 +517,7 @@ private Array<E> array;
 - `E dequeue()`
 - `E getFront()`
 
-##### 复杂度分析
+##### 时间复杂度分析
 
 |      操作      |      时间复杂度      |
 | :------------: | :------------------: |
@@ -569,7 +569,7 @@ for (int i = front; i != tail; i = (i + 1) % data.length) {
 }
 ```
 
-##### 复杂度分析
+##### 时间复杂度分析
 
 |      操作      |      时间复杂度      |
 | :------------: | :------------------: |
@@ -679,8 +679,9 @@ private int size;
 - `E remove(int index)`
 - `E removeFirst()`
 - `E removeLast()`
+- `void removeElement(E e)`
 
-#### 复杂度分析
+#### 时间复杂度分析
 
 |     操作      |   时间复杂度    |
 | :-----------: | :-------------: |
@@ -1069,7 +1070,7 @@ MergerSort(arr,l,r){
 
 
 
-#### 时间复杂度大小比较
+#### 时间复杂度分析
 
 
 
@@ -1508,6 +1509,7 @@ private int costDays(int[] weights, int k) {
   - `11-16-Set`
     - `11-16-1-BSTSet`
     - `11-16-2-LinkedListSet`
+    - `11-16-3-Time-Complexity-of-Set`
 
 ### 二叉树
 
@@ -1713,7 +1715,42 @@ public void add(E e) {
 - `int getSize();`
 - `boolean isEmpty();`
 
-#### 映射
+##### 时间复杂度分析
+
+二者比较
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_16_3_1.png" title="Time-Complexity-of-Set.png" height="50%" width="50%">
+</div>
+
+计算 $BSTSet$ 时间复杂度：
+$$
+\begin{aligned}
+&2^{0}+2^{1}+2^{2}+2^{3}+2^{4}+\ldots+2^{h-1} \\
+&=\frac{1 \times\left(1-2^{h}\right)}{1-2}\\
+&=2^{h}-1=n
+\end{aligned}
+$$
+得到
+$$
+\begin{aligned}
+h &=\log _{2}(n+1) \\
+&=O\left(\log _{2} n\right)\\
+&=O(\log n)
+\end{aligned}
+$$
+
+|      操作       | $BSTSet$ 时间复杂度  | $LinkListSet$ 时间复杂度 |
+| :-------------: | :------------------: | :----------------------: |
+|   `add(E e)`    | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+| `contains(E e)` | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+|  `remove(E e)`  | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+|   `getSize()`   |   $\mathrm{O}(1)$    |     $\mathrm{O}(1)$      |
+|   `isEmpty()`   |   $\mathrm{O}(1)$    |     $\mathrm{O}(1)$      |
+
+> 同样的数据对应不同的二分搜索树，意味着 $BSTSet$ 可能退化为 $LinkListSet$ ，此时的时间复杂度也增加到 $\mathrm{O}(n)$。
+
+#### 映射 
 
 # Star History
 
