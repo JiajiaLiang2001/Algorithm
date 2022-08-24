@@ -1,4 +1,6 @@
-数据结构与算法
+# 数据结构与算法
+
+[![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
 
 - [基础了解](#基础了解)
   - [线性查找](#线性查找)
@@ -74,7 +76,6 @@
     - [二分搜索树的应用](#二分搜索树的应用)
       - [集合](#集合)
       - [映射](#映射)
-- [Star History](#star-history)
 
 # 基础了解
 
@@ -620,7 +621,7 @@ private int size;
   - `06-3-DummyHead-in-LinkedList`
   - `06-4-Query-and-Update-in-LinkedList`
   - `06-5-Remove-Element-in-LinkedList`
-  - 06-6-Implement-Stack-in-LinkedList
+  - `06-6-Implement-Stack-in-LinkedList`
   - `06-7-Compare-LinkedList-Stack-and-Array-Stack`
   - `06-8-Implement-Queue-in-LinkedList`
   - `06-9-Compare-LinkedList-Queue-LoopQueue-and-Array-Queue`
@@ -1724,6 +1725,8 @@ public void add(E e) {
 </div>
 
 计算 $BSTSet$ 时间复杂度：
+
+
 $$
 \begin{aligned}
 &2^{0}+2^{1}+2^{2}+2^{3}+2^{4}+\ldots+2^{h-1} \\
@@ -1731,7 +1734,11 @@ $$
 &=2^{h}-1=n
 \end{aligned}
 $$
+
+
 得到
+
+
 $$
 \begin{aligned}
 h &=\log _{2}(n+1) \\
@@ -1739,6 +1746,9 @@ h &=\log _{2}(n+1) \\
 &=O(\log n)
 \end{aligned}
 $$
+
+
+
 
 |      操作       | $BSTSet$ 时间复杂度  | $LinkListSet$ 时间复杂度 |
 | :-------------: | :------------------: | :----------------------: |
@@ -1752,6 +1762,5 @@ $$
 
 #### 映射 
 
-# Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=JiajiaLiang2001/Algorithm&type=Date)](https://star-history.com/#JiajiaLiang2001/Algorithm&Date)
+
