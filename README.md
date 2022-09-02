@@ -1797,8 +1797,7 @@ $$
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_17_3_1.png" title="Time-Complexity-of-Map.png" height="50%" width="50%">
 </div>
-
-[计算方式如上](#时间复杂度分析)
+[计算方式如上](#时间复杂度分析-7)
 
 |           操作           | $BSTSet$ 时间复杂度  | $LinkListSet$ 时间复杂度 |
 | :----------------------: | :------------------: | :----------------------: |
