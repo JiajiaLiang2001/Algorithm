@@ -11,7 +11,7 @@ public class Solution {
         for (int i : nums1)
             set.add(i);
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i : nums2) {
+        for (int i : nums2) { // nums2 = [2,2]
             if (set.contains(i)) {
                 list.add(i);
                 set.remove(i);
