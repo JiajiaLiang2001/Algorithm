@@ -1786,3 +1786,23 @@ $$
 - `void set(K key, V newValue);`
 - `int getSize();`
 - `boolean isEmpty();`
+
+##### 时间复杂度分析
+
+二者比较
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_17_3_1.png" title="Time-Complexity-of-Map.png" height="50%" width="50%">
+</div>
+
+|           操作           | $BSTSet$ 时间复杂度  | $LinkListSet$ 时间复杂度 |
+| :----------------------: | :------------------: | :----------------------: |
+|  `add(K key, V value)`   | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+|     `remove(K key)`      | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+|    `contains(K key)`     | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+|       `get(K key)`       | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+| `set(K key, V newValue)` | $\mathrm{O}(\log n)$ |     $\mathrm{O}(n)$      |
+|       `getSize()`        |   $\mathrm{O}(1)$    |     $\mathrm{O}(1)$      |
+|       `isEmpty()`        |   $\mathrm{O}(1)$    |     $\mathrm{O}(1)$      |
+
+> 同样的数据对应不同的二分搜索树，意味着 $BSTMap$ 可能退化为 $LinkListMap$ ，此时的时间复杂度也增加到 $\mathrm{O}(n)$。
