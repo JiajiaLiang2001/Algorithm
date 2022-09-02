@@ -4,9 +4,8 @@
 
 1. 网络问题
 
-2. 安装插件 MathJax Plugin for Github
+2. 安装插件 MathJax Plugin for Github https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related
 
-   https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related
 
 具体解决方法：
 
@@ -1463,8 +1462,6 @@ $1 1 3 3 5 5 7 7$
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/binary_search_template.png" title="Binary-Search-Ttemplate" height="50%" width="50%">
 </div>
-------
-
 - 校正 $l$ ，上取整 $mid = l + (r - l) / 2;$
 
 - 校正 $r$ ，上取整 $mid = l + (r - l + 1) / 2;$
@@ -1738,8 +1735,9 @@ public void add(E e) {
 
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_16_3_1.png" title="Time-Complexity-of-Set.png" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_16_3_1.png" title="Time-Complexity-of-Set" height="50%" width="50%">
 </div>
+
 
 
 计算 $BSTSet$ 时间复杂度：
@@ -1799,9 +1797,8 @@ $$
 二者比较
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_17_3_1.png" title="Time-Complexity-of-Map.png" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/11_17_3_1.png" title="Time-Complexity-of-Map" height="50%" width="50%">
 </div>
-
 
 [计算方法如上](#时间复杂度分析-7)
 
@@ -1828,3 +1825,74 @@ $$
 
 [350. Intersection of Two Arrays II](https://leetcode.cn/problems/intersection-of-two-arrays-ii/)
 
+# 进阶部分
+
+## 堆 & 优先队列
+
+- 
+
+实现优先队列的方式以及时间复杂度
+
+|   数据结构   |         入队         |         出队         |
+| :----------: | :------------------: | :------------------: |
+| 普通线性结构 |   $\mathrm{O}(1)$    |   $\mathrm{O}(n)$    |
+| 顺序线性结构 |   $\mathrm{O}(n)$    |   $\mathrm{O}(1)$    |
+|    **堆**    | $\mathrm{O}(\log n)$ | $\mathrm{O}(\log n)$ |
+
+**二叉堆（Binary Heap）**：堆的一种实现。
+
+- 完全二叉树
+- 堆中某个节点的值总是不大于其父节点的值，父节点 >=子节点（最大堆）
+- 堆中某个节点的值总是不小于其父节点的值，父节点 <=子节点（最小堆）
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/binary_heap.png" title="Binary-Heap" height="50%" width="50%">
+</div>
+
+1. 使用数组存储二叉堆
+
+| 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 10   |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| -    | 62   | 41   | 30   | 28   | 16   | 22   | 13   | 19   | 17   | 15   |
+
+父节点 -> 子节点
+
+`left child (i) = 2 * i`
+
+`right child (i) = 2 * i + 1`
+
+子节点 -> 父节点
+
+`parent (i) = i / 2`
+
+| 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 62   | 41   | 30   | 28   | 16   | 22   | 13   | 19   | 17   | 15   |
+
+父节点 -> 子节点
+
+`left child (i) = 2 * i + 1`
+
+`right child (i) = 2 * (i + 1)`
+
+子节点 -> 父节点
+
+`parent (i) = (i - 1) / 2`
+
+## 冒泡排序
+
+## 希尔排序
+
+## 线段树
+
+## 字典树
+
+## 并查集
+
+## 平衡二叉树（AVL）
+
+## 红黑树
+
+## 哈希表
+
+## SQRT 分解
