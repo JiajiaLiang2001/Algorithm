@@ -1524,6 +1524,11 @@ private int costDays(int[] weights, int k) {
     - `11-16-1-BSTSet`
     - `11-16-2-LinkedListSet`
     - `11-16-3-Time-Complexity-of-Set`
+    - `11-16-4-Unique-Morse-Code-Words`
+  - `11-17-Map`
+    - `11-17-1-BSTMap`
+    - `11-17-2-LinkedList`
+    - `11-17-3-Time-Complexity-of-Map`
 
 ### 二叉树
 
@@ -1583,7 +1588,7 @@ private int size;
 - `void add(E e)`
 - `boolean contains(E e)`
 - `void preOrder(Node node)`
-  - void pretOrder(Node node)
+  - `void pretOrder(Node node)`
 - `void preOrderNR()`
 - `void inOrder()`
   - `void inOrder(Node node)`
@@ -1711,17 +1716,9 @@ public void add(E e) {
 
 ### 二分搜索树的应用
 
-#### 集合
+#### 集合 Set
 
-基于二分搜索树封装属于我们的集合：
-
-- `void add(E e);`
-- `boolean contains(E e);`
-- `void remove(E e);`
-- `int getSize();`
-- `boolean isEmpty();`
-
-基于链表封装属于我们的集合：
+基于二分搜索树封装属于我们的集合 & 基于链表封装属于我们的集合
 
 - `void add(E e);`
 - `boolean contains(E e);`
@@ -1778,7 +1775,14 @@ $$
 - 有序集合中的元素具有顺序性——基于搜索树的实现
 - 无序集合中的元素没有顺序性——基于哈希表的实现（截止目前使用链表实现）
 
-#### 映射 
+#### 映射  Map
 
+基于二分搜索树封装属于我们的映射 & 基于链表封装属于我们的映射：
 
-
+- `void add(K key, V value);`
+- `V remove(K key);`
+- `boolean contains(K key);`
+- `V get(K key);`
+- `void set(K key, V newValue);`
+- `int getSize();`
+- `boolean isEmpty();`
