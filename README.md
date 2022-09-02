@@ -1532,6 +1532,8 @@ private int costDays(int[] weights, int k) {
     - `11-17-1-BSTMap`
     - `11-17-2-LinkedList`
     - `11-17-3-Time-Complexity-of-Map`
+    - `11-17-4-Intersection-of-Two-Arrays`
+    - `11-17-5-Intersection-of-Two-Arrays-II`
 
 ### 二叉树
 
@@ -1821,3 +1823,8 @@ $$
 - 无序映射中的键没有顺序性——基于哈希表的实现（截止目前使用链表实现）
 
 ### 相关问题
+
+[349. Intersection of Two Arrays](https://leetcode.cn/problems/intersection-of-two-arrays/)
+
+[350. Intersection of Two Arrays II](https://leetcode.cn/problems/intersection-of-two-arrays-ii/)
+
