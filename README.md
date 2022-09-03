@@ -55,7 +55,6 @@
     - [相关题目](#相关题目)
       - [理论](#理论)
     - [关于链表的更多](#关于链表的更多)
-  - [</div>](#div)
     - [相关问题](#相关问题)
 - [递归](#递归)
   - [归并排序](#归并排序)
@@ -1004,8 +1003,6 @@ class Node{
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/array_linked_list.png" title="Array-Linked-List" height="50%" width="50%">
 </div>
-------
-
 ### 相关问题
 
 [Leetcode 206. Reverse Linked List](https://leetcode.cn/problems/reverse-linked-list/)
