@@ -3,9 +3,7 @@
 注：公式无法显示问题：
 
 1. 网络问题
-
-2. 安装插件 MathJax Plugin for Github https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related
-
+2. 安装插件  [MathJax Plugin for Github](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related)
 
 具体解决方法：
 
@@ -79,7 +77,6 @@
       - [归并排序](#归并排序-1)
     - [二分查找法的变种](#二分查找法的变种)
     - [二分查找模板](#二分查找模板)
-  - [</div>](#div-1)
     - [相关问题](#相关问题-1)
   - [二分搜索树](#二分搜索树)
     - [二叉树](#二叉树)
@@ -91,6 +88,22 @@
         - [时间复杂度分析](#时间复杂度分析-7)
       - [映射  Map](#映射--map)
         - [时间复杂度分析](#时间复杂度分析-8)
+    - [相关问题](#相关问题-2)
+- [进阶部分](#进阶部分)
+  - [堆 & 优先队列](#堆--优先队列)
+    - [使用数组存储二叉堆](#使用数组存储二叉堆)
+      - [元素上浮](#元素上浮)
+      - [元素下沉](#元素下沉)
+    - [堆排序](#堆排序)
+  - [冒泡排序](#冒泡排序)
+  - [希尔排序](#希尔排序)
+  - [线段树](#线段树)
+  - [字典树](#字典树)
+  - [并查集](#并查集)
+  - [平衡二叉树（AVL）](#平衡二叉树avl)
+  - [红黑树](#红黑树)
+  - [哈希表](#哈希表)
+  - [SQRT 分解](#sqrt-分解)
 
 # 基础了解
 
@@ -1829,7 +1842,8 @@ $$
 
 ## 堆 & 优先队列
 
-- 
+- **12-Heap**
+  - `12-1-Max-Heap`
 
 实现优先队列的方式以及时间复杂度
 
@@ -1849,7 +1863,7 @@ $$
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/binary_heap.png" title="Binary-Heap" height="50%" width="50%">
 </div>
 
-1. 使用数组存储二叉堆
+### 使用数组存储二叉堆
 
 | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 10   |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -1878,6 +1892,24 @@ $$
 子节点 -> 父节点
 
 `parent (i) = (i - 1) / 2`
+
+> 采用这一种方式
+
+#### 元素上浮
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_1.png" title="Sift-Up" height="50%" width="50%">
+</div>
+
+#### 元素下沉
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_2.png" title="Sift-Down" height="50%" width="50%">
+</div>
+
+### 堆排序
+
+
 
 ## 冒泡排序
 
