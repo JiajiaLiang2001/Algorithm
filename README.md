@@ -1900,13 +1900,15 @@ $$
 - 元素上浮
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_1.png" title="Sift-Up" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_1.png" title="Sift-Up">
 </div>
+
 - 元素下沉
 
 <div align=center>
-  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_2.png" title="Sift-Down" height="50%" width="50%">
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_2.png" title="Sift-Down">
 </div>
+
 
 ### 堆排序
 
