@@ -138,7 +138,7 @@ for (int i = 0; i < data.length; i++)
 
 #### 数字 $n$ 的 $x$ 进制位
 
-$\mathrm{O}\left(\log _{x} n\right)=>\mathrm{O}(\log n)$
+$\mathrm{O}(\log n)$
 
 ```java
 while (n) {
