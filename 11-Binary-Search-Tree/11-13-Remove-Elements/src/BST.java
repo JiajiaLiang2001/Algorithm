@@ -27,14 +27,29 @@ public class BST<E extends Comparable<E>> {
         size = 0;
     }
 
+    /**
+     * Get the size of BST
+     *
+     * @return
+     */
     public int size() {
         return size;
     }
 
+    /**
+     * Check if BST is empty
+     *
+     * @return
+     */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**
+     * Add node to BST
+     *
+     * @param e
+     */
     public void add(E e) {
         root = add(root, e);
     }
@@ -51,6 +66,12 @@ public class BST<E extends Comparable<E>> {
         return node;
     }
 
+    /**
+     * Whether the specified element exists in BST
+     *
+     * @param e
+     * @return
+     */
     public boolean contains(E e) {
         return contains(root, e);
     }
@@ -62,6 +83,9 @@ public class BST<E extends Comparable<E>> {
         else return contains(node.right, e);
     }
 
+    /**
+     * Preorder traversal of BST
+     */
     public void preOrder() {
         preOrder(root);
     }
@@ -74,6 +98,9 @@ public class BST<E extends Comparable<E>> {
         preOrder(node.right);
     }
 
+    /**
+     * Preorder traversal of BST (non-recursive)
+     */
     public void preOrderNR() {
         if (root == null)
             return;
@@ -89,6 +116,9 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * Inorder traversal of BST
+     */
     public void inOrder() {
         inOrder(root);
     }
@@ -101,6 +131,9 @@ public class BST<E extends Comparable<E>> {
         inOrder(node.right);
     }
 
+    /**
+     * Inorder traversal of BST (non-recursive)
+     */
     public void inOrderNR() {
         if (root == null)
             return;
@@ -120,6 +153,9 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * Postorder traversal of BST
+     */
     public void postOrder() {
         postOrder(root);
     }
@@ -133,6 +169,9 @@ public class BST<E extends Comparable<E>> {
         System.out.println(node);
     }
 
+    /**
+     * Postorder traversal of BST (non-recursive)
+     */
     public void postOrderNR() {
         if (root == null)
             return;
@@ -156,6 +195,9 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * Level order traversal of BST
+     */
     public void levelOrder() {
         if (root == null) return;
         Queue<Node> queue = new LinkedList<>();
@@ -168,6 +210,11 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * Minimum element of BST
+     *
+     * @return
+     */
     public E minimum() {
         if (size == 0)
             throw new IllegalArgumentException("BST is empty");
@@ -181,6 +228,11 @@ public class BST<E extends Comparable<E>> {
         return minimum(node.left);
     }
 
+    /**
+     * Remove the minimum element of BST
+     *
+     * @return
+     */
     public E removeMin() {
         E minimum = minimum();
         root = removeMin(root);
@@ -198,6 +250,11 @@ public class BST<E extends Comparable<E>> {
         return node;
     }
 
+    /**
+     * Maximum element of BST
+     *
+     * @return
+     */
     public E maximum() {
         if (size == 0)
             throw new IllegalArgumentException("BST is empty");
@@ -210,6 +267,11 @@ public class BST<E extends Comparable<E>> {
         return maximum(node.right);
     }
 
+    /**
+     * Remove the maximum element of BST
+     *
+     * @return
+     */
     public E removeMax() {
         E maximum = maximum();
         root = removeMax(root);
@@ -227,6 +289,11 @@ public class BST<E extends Comparable<E>> {
         return node;
     }
 
+    /**
+     * Remove the specified element of the BST
+     *
+     * @param e
+     */
     public void remove(E e) {
         root = remove(root, e);
     }

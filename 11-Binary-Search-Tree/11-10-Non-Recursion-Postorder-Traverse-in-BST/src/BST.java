@@ -25,14 +25,29 @@ public class BST<E extends Comparable<E>> {
         size = 0;
     }
 
+    /**
+     * Get the size of BST
+     *
+     * @return
+     */
     public int size() {
         return size;
     }
 
+    /**
+     * Check if BST is empty
+     *
+     * @return
+     */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**
+     * Add node to BST
+     *
+     * @param e
+     */
     public void add(E e) {
         root = add(root, e);
     }
@@ -49,6 +64,12 @@ public class BST<E extends Comparable<E>> {
         return node;
     }
 
+    /**
+     * Whether the specified element exists in BST
+     *
+     * @param e
+     * @return
+     */
     public boolean contains(E e) {
         return contains(root, e);
     }
@@ -60,6 +81,9 @@ public class BST<E extends Comparable<E>> {
         else return contains(node.right, e);
     }
 
+    /**
+     * Preorder traversal of BST
+     */
     public void preOrder() {
         preOrder(root);
     }
@@ -72,6 +96,9 @@ public class BST<E extends Comparable<E>> {
         preOrder(node.right);
     }
 
+    /**
+     * Preorder traversal of BST (non-recursive)
+     */
     public void preOrderNR() {
         if (root == null)
             return;
@@ -87,6 +114,9 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * Inorder traversal of BST
+     */
     public void inOrder() {
         inOrder(root);
     }
@@ -99,6 +129,9 @@ public class BST<E extends Comparable<E>> {
         inOrder(node.right);
     }
 
+    /**
+     * Inorder traversal of BST (non-recursive)
+     */
     public void inOrderNR() {
         if (root == null)
             return;
@@ -118,6 +151,9 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * Postorder traversal of BST
+     */
     public void postOrder() {
         postOrder(root);
     }
@@ -131,6 +167,9 @@ public class BST<E extends Comparable<E>> {
         System.out.println(node);
     }
 
+    /**
+     * Postorder traversal of BST (non-recursive)
+     */
     public void postOrderNR() {
         if (root == null)
             return;

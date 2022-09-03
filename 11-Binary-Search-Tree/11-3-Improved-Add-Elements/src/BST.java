@@ -18,14 +18,29 @@ public class BST<E extends Comparable<E>> {
         size = 0;
     }
 
+    /**
+     * Get the size of BST
+     *
+     * @return
+     */
     public int size() {
         return size;
     }
 
+    /**
+     * Check if BST is empty
+     *
+     * @return
+     */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**
+     * Add node to BST
+     *
+     * @param e
+     */
     public void add(E e) {
         root = add(root, e);
     }
