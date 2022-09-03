@@ -21,14 +21,6 @@ public class QuickSort {
         sort(arr, p + 1, r, rnd);
     }
 
-    private static <E extends Comparable<E>> void sort2ways(E[] arr, int l, int r, Random rnd) {
-        if (l >= r) return;
-        int p = partition2ways(arr, l, r, rnd);
-        sort2ways(arr, l, p - 1, rnd);
-        sort2ways(arr, p + 1, r, rnd);
-    }
-
-
     private static <E extends Comparable<E>> int partition(E[] arr, int l, int r, Random rnd) {
         int p = l + rnd.nextInt(r - l + 1);
         swap(arr, l, p);
@@ -39,6 +31,13 @@ public class QuickSort {
                 swap(arr, i, ++j);
         swap(arr, l, j);
         return j;
+    }
+
+    private static <E extends Comparable<E>> void sort2ways(E[] arr, int l, int r, Random rnd) {
+        if (l >= r) return;
+        int p = partition2ways(arr, l, r, rnd);
+        sort2ways(arr, l, p - 1, rnd);
+        sort2ways(arr, p + 1, r, rnd);
     }
 
     private static <E extends Comparable<E>> int partition2ways(E[] arr, int l, int r, Random rnd) {

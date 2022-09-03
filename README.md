@@ -1844,6 +1844,7 @@ $$
 
 - **12-Heap**
   - `12-1-Max-Heap`
+  - `12-2-Heap-Sort`
 
 实现优先队列的方式以及时间复杂度
 
@@ -1909,7 +1910,11 @@ $$
 
 ### 堆排序
 
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_2_1.png" title="Heap-Sort" height="50%" width="50%">
+</div>
 
+> 非原地排序，创建了一个堆，增加了时间
 
 ## 冒泡排序
 
