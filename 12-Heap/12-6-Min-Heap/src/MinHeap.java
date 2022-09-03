@@ -1,12 +1,16 @@
-public class MaxHeap<E extends Comparable<E>> {
+public class MinHeap<E extends Comparable<E>> {
     private Array<E> data;
 
-    public MaxHeap() {
+    public MinHeap() {
         data = new Array<>();
     }
 
-    public MaxHeap(int capacity) {
+    public MinHeap(int capacity) {
         data = new Array<>(capacity);
+    }
+
+    public MinHeap(E[] arr) {
+        heapify(arr);
     }
 
     /**
@@ -75,20 +79,20 @@ public class MaxHeap<E extends Comparable<E>> {
      * @param k
      */
     private void siftUp(int k) {
-        while (k > 0 && data.getElement(parent(k)).compareTo(data.getElement(k)) < 0) {
+        while (k > 0 && data.getElement(parent(k)).compareTo(data.getElement(k)) > 0) {
             data.swap(k, parent(k));
             k = parent(k);
         }
     }
 
     /**
-     * View the largest element in the heap
+     * View the smallest element in the heap
      *
      * @return
      */
-    public E findMax() {
+    public E findMin() {
         if (data.getSize() == 0)
-            throw new IllegalArgumentException("Can not findMax when heap is empty.");
+            throw new IllegalArgumentException("Can not findMin when heap is empty.");
         return data.getElement(0);
     }
 
@@ -98,7 +102,7 @@ public class MaxHeap<E extends Comparable<E>> {
      * @return
      */
     public E extractMax() {
-        E ret = findMax();
+        E ret = findMin();
         data.swap(0, data.getSize() - 1);
         data.removeLast();
         siftDown(0);
@@ -106,19 +110,44 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     /**
-     * elements sift down
+     * Elements sift down
      *
      * @param k
      */
     private void siftDown(int k) {
         while (leftChild(k) < data.getSize()) {
-            int maxChildIndex = leftChild(k);
-            if (rightChild(k) < data.getSize() && data.getElement(rightChild(k)).compareTo(data.getElement(leftChild(k))) > 0) { // Right child > left child
-                maxChildIndex = rightChild(k);
+            int minChildIndex = leftChild(k);
+            if (rightChild(k) < data.getSize() && data.getElement(rightChild(k)).compareTo(data.getElement(leftChild(k))) < 0) { // Right child < left child
+                minChildIndex = rightChild(k);
             }
-            if (data.getElement(k).compareTo(data.getElement(maxChildIndex)) >= 0) break;
-            data.swap(k, maxChildIndex);
-            k = maxChildIndex;
+            if (data.getElement(k).compareTo(data.getElement(minChildIndex)) <= 0) break;
+            data.swap(k, minChildIndex);
+            k = minChildIndex;
         }
+    }
+
+    /**
+     * Remove the top element of the heap and put in the new element
+     *
+     * @param e
+     * @return
+     */
+    public E replace(E e) {
+        E ret = findMin();
+        data.setElement(0, e);
+        siftDown(0);
+        return ret;
+    }
+
+    /**
+     * Convert any array to a heap array
+     *
+     * @param arr
+     */
+    public void heapify(E[] arr) {
+        data = new Array<>(arr);
+        if (arr.length != 1)
+            for (int i = parent(arr.length - 1); i >= 0; i--)
+                siftDown(i);
     }
 }

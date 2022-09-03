@@ -92,9 +92,9 @@
 - [进阶部分](#进阶部分)
   - [堆 & 优先队列](#堆--优先队列)
     - [使用数组存储二叉堆](#使用数组存储二叉堆)
-      - [元素上浮](#元素上浮)
-      - [元素下沉](#元素下沉)
     - [堆排序](#堆排序)
+    - [优化的堆排序](#优化的堆排序)
+    - [优先队列](#优先队列)
   - [冒泡排序](#冒泡排序)
   - [希尔排序](#希尔排序)
   - [线段树](#线段树)
@@ -1845,6 +1845,10 @@ $$
 - **12-Heap**
   - `12-1-Max-Heap`
   - `12-2-Heap-Sort`
+  - `12-3-Replace-in-Heap`
+  - `12-4-Heapify-in-Heap`
+  - `12-5-Heap-Sort-Optimized`
+  - `12-6-Min-Heap`
 
 实现优先队列的方式以及时间复杂度
 
@@ -1896,13 +1900,12 @@ $$
 
 > 采用这一种方式
 
-#### 元素上浮
+- 元素上浮
 
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_1.png" title="Sift-Up" height="50%" width="50%">
 </div>
-
-#### 元素下沉
+- 元素下沉
 
 <div align=center>
   <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_1_2.png" title="Sift-Down" height="50%" width="50%">
@@ -1915,6 +1918,26 @@ $$
 </div>
 
 > 非原地排序，创建了一个堆，增加了时间
+
+- 最大元素替换
+
+`replace`：取出最大元素，放入新元素。
+
+思路：直接替换堆顶元素，再 Sift Down
+
+- 将任意数组整理为堆
+
+`Heapify`
+
+思路：找到倒数第一个非叶子节点，依次向上执行 Sift Down
+
+### 优化的堆排序
+
+<div align=center>
+  <img src="https://github.com/JiajiaLiang2001/Algorithm/blob/master/images/12_5_1.png" title="Heap-Sort-Optimized" height="50%" width="50%">
+</div>
+
+### 优先队列
 
 ## 冒泡排序
 

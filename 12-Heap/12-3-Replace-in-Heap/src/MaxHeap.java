@@ -82,7 +82,7 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     /**
-     * View the largest element of the heap
+     * View the largest element in the heap
      *
      * @return
      */
@@ -106,7 +106,7 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     /**
-     * elements sift down
+     * Elements sift down
      *
      * @param k
      */
